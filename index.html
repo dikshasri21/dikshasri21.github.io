@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dikshasri Saravanan | Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f7fa;
+        }
+
+        nav {
+            background-color: #1f2937;
+            padding: 15px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            position: sticky;
+            top: 0;
+        }
+
+        nav h2 {
+            font-size: 22px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 15px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            color: white;
+            padding: 90px 10%;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .hero h3 {
+            font-size: 20px;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 750px;
+            margin: auto;
+            font-size: 17px;
+        }
+
+        section {
+            padding: 60px 10%;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #1f2937;
+        }
+
+        .about {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+            font-size: 17px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+
+        .card h3 {
+            color: #2563eb;
+            margin-bottom: 12px;
+        }
+
+        .skills span {
+            display: inline-block;
+            background: #e0e7ff;
+            color: #3730a3;
+            padding: 8px 12px;
+            border-radius: 20px;
+            margin: 5px;
+            font-size: 14px;
+        }
+
+        .project-card {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 5px solid #2563eb;
+            border-radius: 8px;
+        }
+
+        .project-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .contact {
+            text-align: center;
+            background: #1f2937;
+            color: white;
+        }
+
+        .contact h2 {
+            color: white;
+        }
+
+        .contact a {
+            color: #93c5fd;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #111827;
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+
+            nav {
+                flex-direction: column;
+            }
+
+            nav a {
+                margin: 5px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <nav>
+        <h2>Dikshasri</h2>
+
+        <div>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+
+    <section class="hero">
+
+        <h1>Hi, I'm Dikshasri Saravanan 👋</h1>
+
+        <h3>
+            MBA Operations & Business Analytics |
+            B.Sc. Computer Science
+        </h3>
+
+        <p>
+            Bridging Technology, Data, and Business to solve problems
+            and support better decision-making.
+        </p>
+
+    </section>
+
+
+    <!-- About -->
+
+    <section id="about">
+
+        <h2>About Me</h2>
+
+        <div class="about">
+
+            <p>
+                I am a Computer Science graduate currently pursuing an MBA
+                specializing in Operations and Business Analytics. I have an
+                interest in technology, data analytics, business operations,
+                and problem-solving.
+            </p>
+
+            <br>
+
+            <p>
+                My background in Computer Science has provided me with
+                technical knowledge, while my MBA is helping me develop
+                business, analytical, and operational skills.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Education -->
+
+    <section id="education">
+
+        <h2>Education</h2>
+
+        <div class="grid">
+
+            <div class="card">
+
+                <h3>MBA</h3>
+
+                <p>
+                    <strong>Operations & Business Analytics</strong>
+                </p>
+
+                <p>
+                    SRM Institute of Science and Technology,
+                    Ramapuram
+                </p>
+
+                <p>
+                    2025 – 2027
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>B.Sc. Computer Science</h3>
+
+                <p>
+                    <strong>Computer Science</strong>
+                </p>
+
+                <p>
+                    Ethiraj College for Women
+                </p>
+
+                <p>
+                    Percentage: 73.91%
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Skills -->
+
+    <section id="skills">
+
+        <h2>Skills</h2>
+
+        <div class="grid">
+
+            <div class="card skills">
+
+                <h3>💻 Technical Skills</h3>
+
+                <span>Python</span>
+                <span>SQL</span>
+                <span>HTML</span>
+                <span>Flask</span>
+                <span>Machine Learning Basics</span>
+
+            </div>
+
+
+            <div class="card skills">
+
+                <h3>📊 Data Analytics</h3>
+
+                <span>Microsoft Excel</span>
+                <span>Power BI</span>
+                <span>Tableau</span>
+                <span>SPSS</span>
+                <span>Data Analysis</span>
+                <span>Data Visualization</span>
+
+            </div>
+
+
+            <div class="card skills">
+
+                <h3>💼 Business Skills</h3>
+
+                <span>Business Analytics</span>
+                <span>Operations Management</span>
+                <span>Supply Chain</span>
+                <span>Logistics</span>
+                <span>Reporting</span>
+                <span>Dashboard Creation</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Projects -->
+
+    <section id="projects">
+
+        <h2>Projects</h2>
+
+
+        <div class="project-card">
+
+            <h3>
+                🚛 Traffic Congestion and Transportation of Goods
+            </h3>
+
+            <p>
+                <strong>Research Project | MBA</strong>
+            </p>
+
+            <br>
+
+            <p>
+                A study on traffic congestion in road transport affecting
+                the transportation of goods in logistics and supply chain.
+                The study focuses on transportation costs, fuel consumption,
+                delivery schedules, and operational efficiency.
+            </p>
+
+            <br>
+
+            <p>
+                <strong>Tools Used:</strong>
+                Excel, SPSS, Data Analysis
+            </p>
+
+        </div>
+
+
+        <div class="project-card">
+
+            <h3>
+                🎮 Memory Gaming Application
+            </h3>
+
+            <p>
+                <strong>Computer Science Project</strong>
+            </p>
+
+            <br>
+
+            <p>
+                A memory-based gaming application developed using
+                Python to improve user interaction and logical thinking.
+            </p>
+
+            <br>
+
+            <p>
+                <strong>Technologies Used:</strong>
+                Python, Tkinter, SQLite
+            </p>
+
+        </div>
+
+
+        <div class="project-card">
+
+            <h3>
+                📊 Data Analytics Dashboard Projects
+            </h3>
+
+            <p>
+                Developed dashboards and reports using Excel and
+                Power BI to analyze business data and generate
+                meaningful insights.
+            </p>
+
+            <br>
+
+            <p>
+                <strong>Tools Used:</strong>
+                Excel, Power BI, Data Visualization
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Certifications -->
+
+    <section id="certifications">
+
+        <h2>Certifications</h2>
+
+        <div class="grid">
+
+            <div class="card">
+
+                <h3>🏆 NPTEL</h3>
+
+                <p>
+                    Fundamentals of Digital Marketing
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>📊 HPE</h3>
+
+                <p>
+                    GenAI Powered Data Analytics
+                    Job Simulation
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>💼 HPE</h3>
+
+                <p>
+                    Digital Sales Job Simulation
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>📈 Deloitte</h3>
+
+                <p>
+                    Data Analytics Job Simulation
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+
+    <section id="contact" class="contact">
+
+        <h2>Let's Connect</h2>
+
+        <p>
+            I am interested in opportunities related to
+            Business Analytics, Data Analytics, Operations,
+            and Technology.
+        </p>
+
+        <br>
+
+        <p>
+            GitHub:
+            <a href="https://github.com/dikshasri21">
+                github.com/dikshasri21
+            </a>
+        </p>
+
+        <br>
+
+        <p>
+            LinkedIn:
+            Add your LinkedIn profile link here
+        </p>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 Dikshasri Saravanan | Professional Portfolio
+        </p>
+
+    </footer>
+
+</body>
+</html>
