@@ -276,33 +276,30 @@
 
 
         .welcome-image img {
-            .photo-placeholder {
     width: 350px;
     height: 350px;
-
+    object-fit: cover;
     border-radius: 50%;
-
-    background: #f7eee4;
-
     border: 10px solid #fffaf4;
-
-    box-shadow:
-        0 8px 30px rgba(92, 65, 43, 0.15);
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    color: #a96f38;
-
-    font-size: 24px;
-
-    font-weight: bold;
-
+    box-shadow: 0 8px 30px rgba(92, 65, 43, 0.15);
     position: relative;
+    z-index: 2;
+}
 
+.photo-placeholder {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background: #f7eee4;
+    border: 10px solid #fffaf4;
+    box-shadow: 0 8px 30px rgba(92, 65, 43, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #a96f38;
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
     z-index: 2;
 }
         /* =========================
