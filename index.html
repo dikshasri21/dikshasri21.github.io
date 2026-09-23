@@ -12,7 +12,7 @@
     <style>
 
         /* =========================
-           RESET
+           BASIC RESET
         ========================= */
 
         * {
@@ -28,8 +28,12 @@
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            color: #ffffff;
-            background: #050505;
+            color: #3d3027;
+            background: #fffdf9;
+        }
+
+        a {
+            text-decoration: none;
         }
 
 
@@ -39,46 +43,64 @@
 
         nav {
             width: 90%;
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 18px 30px;
+            max-width: 1250px;
 
-            background: #181818;
+            margin: 18px auto;
 
-            border-radius: 12px;
+            padding: 18px 32px;
+
+            background: rgba(255, 250, 243, 0.96);
+
+            border: 1px solid #eee1d2;
+
+            border-radius: 15px;
 
             display: flex;
+
             justify-content: space-between;
+
             align-items: center;
 
             position: sticky;
+
             top: 15px;
 
             z-index: 1000;
 
-            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.35);
+            box-shadow:
+                0 8px 25px rgba(107, 78, 52, 0.08);
         }
 
+
         nav h2 {
-            font-size: 22px;
-            color: #ffffff;
+            color: #3b2a20;
+
+            font-size: 23px;
         }
+
 
         nav div {
             display: flex;
+
             align-items: center;
-            gap: 22px;
+
+            gap: 25px;
         }
 
+
         nav a {
-            color: #cccccc;
-            text-decoration: none;
+            color: #3d3027;
+
             font-size: 14px;
+
+            padding: 8px 3px;
+
             transition: 0.3s;
         }
 
+
         nav a:hover {
-            color: #39ff14;
+            color: #a66b35;
         }
 
 
@@ -87,17 +109,13 @@
         ========================= */
 
         .welcome {
-            min-height: 600px;
+            max-width: 1250px;
 
-            max-width: 1200px;
+            min-height: 580px;
 
             margin: auto;
 
-            padding: 90px 60px 60px;
-
-            background: #050505;
-
-            color: white;
+            padding: 80px 65px 45px;
 
             display: grid;
 
@@ -105,83 +123,125 @@
 
             align-items: center;
 
-            gap: 60px;
+            gap: 50px;
 
-            text-align: left;
+            position: relative;
         }
 
 
         .welcome-content {
-            max-width: 650px;
+            max-width: 700px;
+        }
+
+
+        .welcome-label {
+            color: #8b6545;
+
+            font-size: 14px;
+
+            letter-spacing: 4px;
+
+            font-weight: bold;
+
+            margin-bottom: 18px;
+
+            text-transform: uppercase;
+        }
+
+
+        .welcome-label span {
+            display: inline-block;
+
+            width: 65px;
+
+            height: 2px;
+
+            background: #b17a45;
+
+            margin-left: 12px;
+
+            vertical-align: middle;
         }
 
 
         .welcome h1 {
-            font-size: 55px;
+            font-size: 58px;
 
-            line-height: 1.1;
+            line-height: 1.05;
 
-            margin-bottom: 25px;
+            margin-bottom: 20px;
 
-            color: #ffffff;
+            color: #30251f;
+        }
+
+
+        .welcome h1 span {
+            color: #a96f38;
         }
 
 
         .welcome h3 {
-            font-size: 20px;
+            font-size: 21px;
 
             font-weight: normal;
 
-            color: #cccccc;
+            line-height: 1.5;
+
+            color: #2f2924;
 
             margin-bottom: 20px;
         }
 
 
         .welcome p {
-            max-width: 650px;
-
-            margin: 0 0 30px;
+            max-width: 700px;
 
             font-size: 17px;
 
-            color: #999999;
+            color: #77706a;
+
+            margin-bottom: 30px;
         }
 
+
+        /* =========================
+           BUTTON
+        ========================= */
 
         .welcome-button {
             display: inline-block;
 
-            background: #39ff14;
+            background: #ad7540;
 
-            color: #000000;
+            color: white;
 
-            padding: 16px 32px;
+            padding: 15px 28px;
 
-            border-radius: 6px;
-
-            text-decoration: none;
+            border-radius: 8px;
 
             font-weight: bold;
 
-            font-size: 16px;
+            font-size: 15px;
 
-            box-shadow: 0 0 25px rgba(57, 255, 20, 0.25);
+            box-shadow:
+                0 8px 20px rgba(173, 117, 64, 0.22);
 
             transition: 0.3s;
         }
 
 
         .welcome-button:hover {
+            background: #8f5c2f;
+
             transform: translateY(-3px);
 
             box-shadow:
-                0 0 35px rgba(57, 255, 20, 0.45);
+                0 12px 25px rgba(173, 117, 64, 0.30);
         }
 
 
         /* =========================
-           PROFILE IMAGE
+           PROFILE PHOTO
         ========================= */
 
         .welcome-image {
@@ -190,44 +250,84 @@
             justify-content: center;
 
             align-items: center;
+
+            position: relative;
+        }
+
+
+        .welcome-image::before {
+            content: "";
+
+            position: absolute;
+
+            width: 390px;
+
+            height: 390px;
+
+            border-radius: 50%;
+
+            border: 2px solid #ead8c4;
+
+            transform: rotate(-7deg);
         }
 
 
         .welcome-image img {
-            width: 360px;
+            width: 350px;
 
-            height: 360px;
+            height: 350px;
 
             object-fit: cover;
 
             border-radius: 50%;
 
-            border: 3px solid #333333;
+            border: 10px solid #fffaf4;
 
             box-shadow:
-                0 0 45px rgba(57, 255, 20, 0.10);
+                0 8px 30px rgba(92, 65, 43, 0.15);
+
+            position: relative;
+
+            z-index: 2;
         }
 
 
         /* =========================
-           TOOLS SECTION
+           TOOLS
         ========================= */
 
         .worked-with {
-            max-width: 1200px;
+            max-width: 1250px;
 
-            margin: 0 auto;
+            margin: auto;
 
-            padding: 20px 60px 70px;
+            padding: 15px 65px 70px;
         }
 
 
-        .worked-with h3 {
-            color: #ffffff;
+        .section-label {
+            font-size: 24px;
 
-            margin-bottom: 25px;
+            font-weight: bold;
 
-            font-size: 18px;
+            color: #30251f;
+
+            margin-bottom: 22px;
+        }
+
+
+        .section-label span {
+            display: inline-block;
+
+            width: 55px;
+
+            height: 2px;
+
+            background: #b17a45;
+
+            margin-left: 12px;
+
+            vertical-align: middle;
         }
 
 
@@ -237,33 +337,39 @@
             grid-template-columns:
                 repeat(5, 1fr);
 
-            gap: 15px;
+            gap: 18px;
         }
 
 
         .tool-box {
-            border: 1px solid #252525;
+            background: #fffdfa;
 
-            background: #0b0b0b;
+            border: 1px solid #eee2d5;
 
-            border-radius: 8px;
+            border-radius: 12px;
 
-            padding: 20px;
+            padding: 23px 15px;
 
             text-align: center;
 
-            color: #cccccc;
+            color: #49392d;
+
+            font-weight: bold;
+
+            box-shadow:
+                0 5px 18px rgba(99, 73, 50, 0.06);
 
             transition: 0.3s;
         }
 
 
         .tool-box:hover {
-            border-color: #39ff14;
+            transform: translateY(-4px);
 
-            color: #39ff14;
+            border-color: #d8b892;
 
-            transform: translateY(-3px);
+            box-shadow:
+                0 10px 25px rgba(99, 73, 50, 0.10);
         }
 
 
@@ -271,23 +377,40 @@
            GENERAL SECTIONS
         ========================= */
 
-        section {
-            max-width: 1200px;
+        section:not(.welcome) {
+            max-width: 1250px;
 
             margin: auto;
 
-            padding: 80px 60px;
+            padding: 70px 65px;
         }
 
 
         section h2 {
-            text-align: center;
+            font-size: 28px;
 
-            margin-bottom: 40px;
+            color: #30251f;
 
-            color: #ffffff;
+            margin-bottom: 30px;
 
-            font-size: 32px;
+            text-align: left;
+        }
+
+
+        section h2::after {
+            content: "";
+
+            display: inline-block;
+
+            width: 55px;
+
+            height: 2px;
+
+            background: #b17a45;
+
+            margin-left: 15px;
+
+            vertical-align: middle;
         }
 
 
@@ -296,15 +419,29 @@
         ========================= */
 
         .about {
-            max-width: 900px;
+            max-width: 1100px;
 
             margin: auto;
 
-            text-align: center;
+            padding: 30px 35px;
 
-            font-size: 17px;
+            background: #fdf8f1;
 
-            color: #aaaaaa;
+            border: 1px solid #eee2d5;
+
+            border-radius: 14px;
+
+            color: #69615b;
+
+            font-size: 16px;
+
+            box-shadow:
+                0 5px 20px rgba(95, 70, 48, 0.05);
+        }
+
+
+        .about p {
+            margin-bottom: 10px;
         }
 
 
@@ -316,7 +453,7 @@
             display: grid;
 
             grid-template-columns:
-                repeat(auto-fit, minmax(250px, 1fr));
+                repeat(auto-fit, minmax(280px, 1fr));
 
             gap: 20px;
         }
@@ -327,37 +464,44 @@
         ========================= */
 
         .card {
-            background: #101010;
+            background: #fffdfa;
 
-            padding: 25px;
+            padding: 26px;
 
-            border-radius: 10px;
+            border-radius: 12px;
 
-            border: 1px solid #252525;
+            border: 1px solid #eee2d5;
 
             box-shadow:
-                0 5px 20px rgba(0, 0, 0, 0.25);
+                0 5px 18px rgba(95, 70, 48, 0.06);
 
             transition: 0.3s;
         }
 
 
         .card:hover {
-            border-color: #39ff14;
-
             transform: translateY(-4px);
+
+            border-color: #d8b892;
+
+            box-shadow:
+                0 10px 25px rgba(95, 70, 48, 0.10);
         }
 
 
         .card h3 {
-            color: #ffffff;
+            color: #8e5e35;
 
             margin-bottom: 12px;
+
+            font-size: 18px;
         }
 
 
         .card p {
-            color: #aaaaaa;
+            color: #6e6862;
+
+            margin-bottom: 7px;
         }
 
 
@@ -368,26 +512,26 @@
         .skills span {
             display: inline-block;
 
-            background: #171717;
+            background: #f7eee4;
 
-            color: #cccccc;
+            color: #775333;
 
-            padding: 8px 12px;
+            padding: 8px 13px;
 
             border-radius: 20px;
 
-            margin: 5px;
+            margin: 4px;
 
-            font-size: 14px;
+            font-size: 13px;
 
-            border: 1px solid #292929;
+            border: 1px solid #eadac9;
         }
 
 
         .skills span:hover {
-            border-color: #39ff14;
+            background: #ead4ba;
 
-            color: #39ff14;
+            color: #5d3d22;
         }
 
 
@@ -396,15 +540,44 @@
         ========================= */
 
         .project-card {
-            background: #101010;
+            background: #fffdfa;
 
             padding: 25px;
 
-            margin-bottom: 20px;
+            margin-bottom: 18px;
 
-            border-left: 3px solid #39ff14;
+            border-left: 4px solid #b17a45;
 
-            border-radius: 8px;
+            border-radius: 10px;
+
+            border-top: 1px solid #eee2d5;
+
+            border-right: 1px solid #eee2d5;
+
+            border-bottom: 1px solid #eee2d5;
+        }
+
+
+        .project-card h3 {
+            color: #8e5e35;
+        }
+
+
+        /* =========================
+           CERTIFICATIONS
+        ========================= */
+
+        #certifications .card h3 {
+            color: #5f4835;
+        }
+
+
+        /* =========================
+           EXPERIENCE
+        ========================= */
+
+        #experience .card {
+            margin-bottom: 18px;
         }
 
 
@@ -413,29 +586,31 @@
         ========================= */
 
         .contact {
-            text-align: center;
+            background: #f8efe4;
 
-            background: #101010;
+            border: 1px solid #ead8c4;
 
-            color: white;
+            border-radius: 15px;
 
-            border-radius: 12px;
+            margin-bottom: 50px;
         }
 
 
         .contact h2 {
-            color: white;
+            color: #4a3424;
         }
 
 
         .contact a {
-            color: #39ff14;
+            color: #9a6331;
 
-            text-decoration: none;
+            font-weight: bold;
         }
 
 
         .contact a:hover {
+            color: #70451f;
+
             text-decoration: underline;
         }
 
@@ -447,13 +622,59 @@
         footer {
             text-align: center;
 
-            padding: 20px;
+            padding: 22px;
 
-            background: #000000;
+            background: #f6ede3;
 
-            color: #777777;
+            color: #756b62;
 
-            border-top: 1px solid #1c1c1c;
+            border-top: 1px solid #eadfd3;
+        }
+
+
+        /* =========================
+           DECORATIVE BACKGROUND
+        ========================= */
+
+        body::before {
+            content: "";
+
+            position: fixed;
+
+            width: 250px;
+
+            height: 250px;
+
+            background: #f8eee3;
+
+            border-radius: 50%;
+
+            left: -160px;
+
+            top: 350px;
+
+            z-index: -1;
+        }
+
+
+        body::after {
+            content: "";
+
+            position: fixed;
+
+            width: 300px;
+
+            height: 300px;
+
+            background: #fbf2e8;
+
+            border-radius: 50%;
+
+            right: -180px;
+
+            bottom: 100px;
+
+            z-index: -1;
         }
 
 
@@ -461,14 +682,16 @@
            MOBILE
         ========================= */
 
-        @media (max-width: 800px) {
+        @media (max-width: 900px) {
 
             nav {
-                width: 95%;
+                width: 94%;
 
                 flex-direction: column;
 
                 gap: 15px;
+
+                padding: 18px;
             }
 
 
@@ -486,7 +709,7 @@
 
                 text-align: center;
 
-                padding: 70px 25px;
+                padding: 70px 25px 40px;
             }
 
 
@@ -503,36 +726,69 @@
 
 
             .welcome-image {
+                margin-top: 30px;
+
                 order: -1;
             }
 
 
             .welcome-image img {
-                width: 250px;
+                width: 270px;
 
-                height: 250px;
+                height: 270px;
+            }
+
+
+            .welcome-image::before {
+                width: 300px;
+
+                height: 300px;
             }
 
 
             .welcome h1 {
-                font-size: 38px;
-            }
-
-
-            section {
-                padding: 60px 25px;
-            }
-
-
-            .worked-with {
-                padding:
-                    20px 25px 60px;
+                font-size: 42px;
             }
 
 
             .tool-row {
                 grid-template-columns:
                     repeat(2, 1fr);
+            }
+
+
+            .worked-with {
+                padding:
+                    20px 25px 50px;
+            }
+
+
+            section:not(.welcome) {
+                padding: 60px 25px;
+            }
+
+        }
+
+
+        @media (max-width: 550px) {
+
+            .welcome h1 {
+                font-size: 35px;
+            }
+
+
+            .welcome h3 {
+                font-size: 18px;
+            }
+
+
+            .tool-row {
+                grid-template-columns: 1fr;
+            }
+
+
+            nav a {
+                font-size: 12px;
             }
 
         }
@@ -553,17 +809,28 @@
 
         <h2>Dikshasri</h2>
 
+
         <div>
 
-            <a href="#welcome">Home</a>
+            <a href="#welcome">
+                Home
+            </a>
 
-            <a href="#about">About</a>
+            <a href="#about">
+                About
+            </a>
 
-            <a href="#education">Education</a>
+            <a href="#education">
+                Education
+            </a>
 
-            <a href="#skills">Skills</a>
+            <a href="#skills">
+                Skills
+            </a>
 
-            <a href="#projects">Projects</a>
+            <a href="#projects">
+                Projects
+            </a>
 
             <a href="#certifications">
                 Certifications
@@ -573,7 +840,9 @@
                 Experience
             </a>
 
-            <a href="#contact">Contact</a>
+            <a href="#contact">
+                Contact
+            </a>
 
         </div>
 
@@ -585,20 +854,41 @@
          WELCOME
     ========================= -->
 
-    <section class="welcome" id="welcome">
+    <section
+        class="welcome"
+        id="welcome"
+    >
 
 
         <div class="welcome-content">
 
 
+            <div class="welcome-label">
+
+                WELCOME TO MY PORTFOLIO
+
+                <span></span>
+
+            </div>
+
+
             <h1>
-                Hi, I'm Dikshasri Saravanan
+
+                Hi, I'm
+
+                <span>
+                    Dikshasri Saravanan
+                </span>
+
             </h1>
 
 
             <h3>
+
                 MBA – Operations & Business Analytics |
+
                 B.Sc. Computer Science
+
             </h3>
 
 
@@ -626,12 +916,15 @@
         </div>
 
 
+
         <div class="welcome-image">
+
 
             <img
                 src="profile.jpg"
                 alt="Dikshasri Saravanan"
             >
+
 
         </div>
 
@@ -647,9 +940,13 @@
     <section class="worked-with">
 
 
-        <h3>
+        <div class="section-label">
+
             Tools & Technologies
-        </h3>
+
+            <span></span>
+
+        </div>
 
 
         <div class="tool-row">
@@ -715,9 +1012,6 @@
             </p>
 
 
-            <br>
-
-
             <p>
 
                 I have worked on machine learning
@@ -729,9 +1023,6 @@
                 documentation, and productivity.
 
             </p>
-
-
-            <br>
 
 
             <p>
@@ -853,8 +1144,6 @@
         <div class="grid">
 
 
-            <!-- AI -->
-
             <div class="card skills">
 
 
@@ -891,8 +1180,6 @@
             </div>
 
 
-
-            <!-- DATA -->
 
             <div class="card skills">
 
@@ -956,8 +1243,6 @@
 
 
 
-            <!-- ML -->
-
             <div class="card skills">
 
 
@@ -1004,8 +1289,6 @@
             </div>
 
 
-
-            <!-- BUSINESS -->
 
             <div class="card skills">
 
@@ -1072,9 +1355,6 @@
         </h2>
 
 
-
-        <!-- Excel -->
-
         <div class="card project-card">
 
 
@@ -1096,9 +1376,6 @@
             </p>
 
 
-            <br>
-
-
             <p>
 
                 <strong>Tools:</strong>
@@ -1113,8 +1390,6 @@
         </div>
 
 
-
-        <!-- Power BI -->
 
         <div class="card project-card">
 
@@ -1136,9 +1411,6 @@
             </p>
 
 
-            <br>
-
-
             <p>
 
                 <strong>Tools:</strong>
@@ -1153,8 +1425,6 @@
         </div>
 
 
-
-        <!-- Diabetes -->
 
         <div class="card project-card">
 
@@ -1181,9 +1451,6 @@
             </p>
 
 
-            <br>
-
-
             <p>
 
                 <strong>Tools:</strong>
@@ -1201,8 +1468,6 @@
         </div>
 
 
-
-        <!-- Research -->
 
         <div class="card project-card">
 
@@ -1225,9 +1490,6 @@
             </p>
 
 
-            <br>
-
-
             <p>
 
                 <strong>Tools:</strong>
@@ -1243,8 +1505,6 @@
         </div>
 
 
-
-        <!-- Python -->
 
         <div class="card project-card">
 
@@ -1262,9 +1522,6 @@
                 and user interaction concepts.
 
             </p>
-
-
-            <br>
 
 
             <p>
@@ -1295,15 +1552,14 @@
         </h2>
 
 
-
         <div class="grid">
 
 
             <div class="card">
 
                 <h3>
-                    HPE — GenAI Powered Data Analytics
-                    Job Simulation
+                    HPE — GenAI Powered Data
+                    Analytics Job Simulation
                 </h3>
 
                 <p>
@@ -1311,7 +1567,6 @@
                 </p>
 
             </div>
-
 
 
             <div class="card">
@@ -1328,7 +1583,6 @@
             </div>
 
 
-
             <div class="card">
 
                 <h3>
@@ -1343,7 +1597,6 @@
             </div>
 
 
-
             <div class="card">
 
                 <h3>
@@ -1355,7 +1608,6 @@
                 </p>
 
             </div>
-
 
 
             <div class="card">
@@ -1392,94 +1644,85 @@
         </h2>
 
 
-
-        <!-- SRR -->
-
-        <div class="card">
+        <div class="grid">
 
 
-            <h3>
-                SRR Industries — Internship
-            </h3>
+            <div class="card">
 
 
-            <p>
-
-                Gained practical exposure to logistics
-                and supply chain operations,
-                documentation, and the movement of
-                raw materials and finished goods.
-
-                Worked on documentation-related
-                activities and studied the impact of
-                traffic congestion on road
-                transportation.
-
-                Collected primary data through
-                Google Forms and analysed the
-                responses using SPSS.
-
-            </p>
+                <h3>
+                    SRR Industries — Internship
+                </h3>
 
 
-            <br>
+                <p>
+
+                    Gained practical exposure to logistics
+                    and supply chain operations,
+                    documentation, and the movement of
+                    raw materials and finished goods.
+
+                    Worked on documentation-related
+                    activities and studied the impact of
+                    traffic congestion on road
+                    transportation.
+
+                    Collected primary data through
+                    Google Forms and analysed the
+                    responses using SPSS.
+
+                </p>
 
 
-            <p>
+                <p>
 
-                <strong>Focus:</strong>
+                    <strong>Focus:</strong>
 
-                Logistics & Supply Chain |
-                Documentation |
-                Data Analysis |
-                SPSS |
-                Research
+                    Logistics & Supply Chain |
+                    Documentation |
+                    Data Analysis |
+                    SPSS |
+                    Research
 
-            </p>
+                </p>
 
 
-        </div>
+            </div>
 
 
 
-        <br>
+            <div class="card">
 
 
-
-        <!-- Chennai Port -->
-
-        <div class="card">
-
-
-            <h3>
-                Chennai Port Authority —
-                Web Development Intern
-            </h3>
+                <h3>
+                    Chennai Port Authority —
+                    Web Development Intern
+                </h3>
 
 
-            <p>
+                <p>
 
-                Assisted in developing web pages
-                using HTML and CSS and gained
-                practical exposure to front-end
-                web development and website
-                structure.
+                    Assisted in developing web pages
+                    using HTML and CSS and gained
+                    practical exposure to front-end
+                    web development and website
+                    structure.
 
-            </p>
-
-
-            <br>
+                </p>
 
 
-            <p>
+                <p>
 
-                <strong>Focus:</strong>
+                    <strong>Focus:</strong>
 
-                HTML |
-                CSS |
-                Web Development
+                    HTML |
+                    CSS |
+                    Web Development
 
-            </p>
+                </p>
+
+
+            </div>
 
 
         </div>
@@ -1493,23 +1736,18 @@
          CONTACT
     ========================= -->
 
-    <section id="contact" class="contact">
+    <section
+        id="contact"
+        class="contact"
+    >
 
 
         <h2>
-            📩 Contact
+            Let's Connect
         </h2>
 
 
         <div class="card">
-
-
-            <h3>
-                Let's Connect
-            </h3>
-
-
-            <br>
 
 
             <p>
@@ -1530,7 +1768,9 @@
 
                 📧 Email:
 
-                <a href="mailto:saravanandikshasri21064@gmail.com">
+                <a
+                    href="mailto:saravanandikshasri21064@gmail.com"
+                >
 
                     GMail
 
@@ -1585,8 +1825,10 @@
     <footer>
 
         <p>
+
             © 2026 Dikshasri S |
             Professional Portfolio
+
         </p>
 
     </footer>
