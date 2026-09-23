@@ -1,490 +1,1597 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Dikshasri S | Portfolio</title>
 
     <style>
+
+        /* =========================
+           RESET
+        ========================= */
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background-color: #f5f7fa;
+            color: #ffffff;
+            background: #050505;
         }
 
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
         nav {
-            background-color: #1f2937;
-            padding: 15px 8%;
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 18px 30px;
+
+            background: #181818;
+
+            border-radius: 12px;
+
             display: flex;
             justify-content: space-between;
             align-items: center;
-            color: white;
+
             position: sticky;
-            top: 0;
+            top: 15px;
+
+            z-index: 1000;
+
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.35);
         }
 
         nav h2 {
             font-size: 22px;
+            color: #ffffff;
+        }
+
+        nav div {
+            display: flex;
+            align-items: center;
+            gap: 22px;
         }
 
         nav a {
-            color: white;
+            color: #cccccc;
             text-decoration: none;
-            margin-left: 20px;
-            font-size: 15px;
+            font-size: 14px;
+            transition: 0.3s;
         }
 
-        .hero {
-            background: linear-gradient(135deg, #2563eb, #7c3aed);
+        nav a:hover {
+            color: #39ff14;
+        }
+
+
+        /* =========================
+           WELCOME SECTION
+        ========================= */
+
+        .welcome {
+            min-height: 600px;
+
+            max-width: 1200px;
+
+            margin: auto;
+
+            padding: 90px 60px 60px;
+
+            background: #050505;
+
             color: white;
-            padding: 90px 10%;
-            text-align: center;
+
+            display: grid;
+
+            grid-template-columns: 1.1fr 0.9fr;
+
+            align-items: center;
+
+            gap: 60px;
+
+            text-align: left;
         }
 
-        .hero h1 {
-            font-size: 45px;
-            margin-bottom: 15px;
+
+        .welcome-content {
+            max-width: 650px;
         }
 
-        .hero h3 {
+
+        .welcome h1 {
+            font-size: 55px;
+
+            line-height: 1.1;
+
+            margin-bottom: 25px;
+
+            color: #ffffff;
+        }
+
+
+        .welcome h3 {
             font-size: 20px;
+
             font-weight: normal;
+
+            color: #cccccc;
+
             margin-bottom: 20px;
         }
 
-        .hero p {
-            max-width: 750px;
-            margin: auto;
+
+        .welcome p {
+            max-width: 650px;
+
+            margin: 0 0 30px;
+
             font-size: 17px;
+
+            color: #999999;
         }
+
+
+        .welcome-button {
+            display: inline-block;
+
+            background: #39ff14;
+
+            color: #000000;
+
+            padding: 16px 32px;
+
+            border-radius: 6px;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            font-size: 16px;
+
+            box-shadow: 0 0 25px rgba(57, 255, 20, 0.25);
+
+            transition: 0.3s;
+        }
+
+
+        .welcome-button:hover {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 0 35px rgba(57, 255, 20, 0.45);
+        }
+
+
+        /* =========================
+           PROFILE IMAGE
+        ========================= */
+
+        .welcome-image {
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+        }
+
+
+        .welcome-image img {
+            width: 360px;
+
+            height: 360px;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+
+            border: 3px solid #333333;
+
+            box-shadow:
+                0 0 45px rgba(57, 255, 20, 0.10);
+        }
+
+
+        /* =========================
+           TOOLS SECTION
+        ========================= */
+
+        .worked-with {
+            max-width: 1200px;
+
+            margin: 0 auto;
+
+            padding: 20px 60px 70px;
+        }
+
+
+        .worked-with h3 {
+            color: #ffffff;
+
+            margin-bottom: 25px;
+
+            font-size: 18px;
+        }
+
+
+        .tool-row {
+            display: grid;
+
+            grid-template-columns:
+                repeat(5, 1fr);
+
+            gap: 15px;
+        }
+
+
+        .tool-box {
+            border: 1px solid #252525;
+
+            background: #0b0b0b;
+
+            border-radius: 8px;
+
+            padding: 20px;
+
+            text-align: center;
+
+            color: #cccccc;
+
+            transition: 0.3s;
+        }
+
+
+        .tool-box:hover {
+            border-color: #39ff14;
+
+            color: #39ff14;
+
+            transform: translateY(-3px);
+        }
+
+
+        /* =========================
+           GENERAL SECTIONS
+        ========================= */
 
         section {
-            padding: 60px 10%;
+            max-width: 1200px;
+
+            margin: auto;
+
+            padding: 80px 60px;
         }
 
-        h2 {
+
+        section h2 {
             text-align: center;
-            margin-bottom: 30px;
-            color: #1f2937;
+
+            margin-bottom: 40px;
+
+            color: #ffffff;
+
+            font-size: 32px;
         }
+
+
+        /* =========================
+           ABOUT
+        ========================= */
 
         .about {
             max-width: 900px;
+
             margin: auto;
+
             text-align: center;
+
             font-size: 17px;
+
+            color: #aaaaaa;
         }
+
+
+        /* =========================
+           GRID
+        ========================= */
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(250px, 1fr));
+
             gap: 20px;
         }
 
+
+        /* =========================
+           CARDS
+        ========================= */
+
         .card {
-            background: white;
+            background: #101010;
+
             padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+
+            border-radius: 10px;
+
+            border: 1px solid #252525;
+
+            box-shadow:
+                0 5px 20px rgba(0, 0, 0, 0.25);
+
+            transition: 0.3s;
         }
 
+
+        .card:hover {
+            border-color: #39ff14;
+
+            transform: translateY(-4px);
+        }
+
+
         .card h3 {
-            color: #2563eb;
+            color: #ffffff;
+
             margin-bottom: 12px;
         }
 
-        .skills span {
-            display: inline-block;
-            background: #e0e7ff;
-            color: #3730a3;
-            padding: 8px 12px;
-            border-radius: 20px;
-            margin: 5px;
-            font-size: 14px;
+
+        .card p {
+            color: #aaaaaa;
         }
 
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        .skills span {
+            display: inline-block;
+
+            background: #171717;
+
+            color: #cccccc;
+
+            padding: 8px 12px;
+
+            border-radius: 20px;
+
+            margin: 5px;
+
+            font-size: 14px;
+
+            border: 1px solid #292929;
+        }
+
+
+        .skills span:hover {
+            border-color: #39ff14;
+
+            color: #39ff14;
+        }
+
+
+        /* =========================
+           PROJECTS
+        ========================= */
+
         .project-card {
-            background: white;
+            background: #101010;
+
             padding: 25px;
+
             margin-bottom: 20px;
-            border-left: 5px solid #2563eb;
+
+            border-left: 3px solid #39ff14;
+
             border-radius: 8px;
         }
 
-        .project-card h3 {
-            margin-bottom: 10px;
-        }
+
+        /* =========================
+           CONTACT
+        ========================= */
 
         .contact {
             text-align: center;
-            background: #1f2937;
+
+            background: #101010;
+
             color: white;
+
+            border-radius: 12px;
         }
+
 
         .contact h2 {
             color: white;
         }
 
+
         .contact a {
-            color: #93c5fd;
+            color: #39ff14;
+
             text-decoration: none;
         }
 
-        footer {
-            text-align: center;
-            padding: 15px;
-            background: #111827;
-            color: white;
+
+        .contact a:hover {
+            text-decoration: underline;
         }
 
-        @media (max-width: 600px) {
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            text-align: center;
+
+            padding: 20px;
+
+            background: #000000;
+
+            color: #777777;
+
+            border-top: 1px solid #1c1c1c;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 800px) {
 
             nav {
+                width: 95%;
+
                 flex-direction: column;
+
+                gap: 15px;
             }
 
-            nav a {
-                margin: 5px;
+
+            nav div {
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+                gap: 12px;
             }
 
-            .hero h1 {
-                font-size: 32px;
+
+            .welcome {
+                grid-template-columns: 1fr;
+
+                text-align: center;
+
+                padding: 70px 25px;
+            }
+
+
+            .welcome-content {
+                margin: auto;
+            }
+
+
+            .welcome p {
+                margin-left: auto;
+
+                margin-right: auto;
+            }
+
+
+            .welcome-image {
+                order: -1;
+            }
+
+
+            .welcome-image img {
+                width: 250px;
+
+                height: 250px;
+            }
+
+
+            .welcome h1 {
+                font-size: 38px;
+            }
+
+
+            section {
+                padding: 60px 25px;
+            }
+
+
+            .worked-with {
+                padding:
+                    20px 25px 60px;
+            }
+
+
+            .tool-row {
+                grid-template-columns:
+                    repeat(2, 1fr);
             }
 
         }
 
     </style>
+
 </head>
+
 
 <body>
 
-    <!-- Navigation -->
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
 
     <nav>
-    <h2>Dikshasri</h2>
 
-    <div>
-    <a href="#about">About</a>
-    <a href="#education">Education</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#certifications">Certifications</a>
-    <a href="#experience">Experience</a>
-    <a href="#contact">Contact</a>
-</div>
-</nav>
+        <h2>Dikshasri</h2>
 
+        <div>
 
-    <!-- Hero Section -->
+            <a href="#welcome">Home</a>
 
-    <section class="hero">
+            <a href="#about">About</a>
 
-        <h1>Hi, I'm Dikshasri 👋</h1>
+            <a href="#education">Education</a>
 
-        <h3>
-            MBA Operations & Business Analytics | B.Sc. Computer Science
-        </h3>
+            <a href="#skills">Skills</a>
 
-        <p>
-            AI & Data Analytics | Product Analytics | Business Problem Solving
-        </p>
+            <a href="#projects">Projects</a>
 
-    </section>
+            <a href="#certifications">
+                Certifications
+            </a>
 
+            <a href="#experience">
+                Experience
+            </a>
 
-    <!-- About -->
-
-    <section id="about">
-
-        <h2>About Me</h2>
-
-        <div class="about">
-
-            <p>
-                I am a Computer Science graduate currently pursuing an MBA specializing in Operations and Business Analytics. My interests lie at the intersection of Artificial Intelligence, data analytics, product thinking, and business problem-solving.
-
-I have worked on machine learning applications, business intelligence dashboards, statistical research, and data-driven projects. I also use generative AI and LLM-based tools for research, analysis, problem-solving, documentation, and productivity.
-
-My goal is to apply my technical and business knowledge to develop AI-enabled and data-driven solutions for real-world business problems.
-            </p>
-
-            <br>
+            <a href="#contact">Contact</a>
 
         </div>
 
+    </nav>
+
+
+
+    <!-- =========================
+         WELCOME
+    ========================= -->
+
+    <section class="welcome" id="welcome">
+
+
+        <div class="welcome-content">
+
+
+            <h1>
+                Hi, I'm Dikshasri Saravanan
+            </h1>
+
+
+            <h3>
+                MBA – Operations & Business Analytics |
+                B.Sc. Computer Science
+            </h3>
+
+
+            <p>
+
+                I am an MBA student with a background
+                in Computer Science, interested in AI,
+                data analytics, product analytics, and
+                solving real-world business problems
+                through technology.
+
+            </p>
+
+
+            <a
+                href="#projects"
+                class="welcome-button"
+            >
+
+                Let's Get Started →
+
+            </a>
+
+
+        </div>
+
+
+        <div class="welcome-image">
+
+            <img
+                src="profile.jpg"
+                alt="Dikshasri Saravanan"
+            >
+
+        </div>
+
+
     </section>
 
 
-    <!-- Education -->
+
+    <!-- =========================
+         TOOLS
+    ========================= -->
+
+    <section class="worked-with">
+
+
+        <h3>
+            Tools & Technologies
+        </h3>
+
+
+        <div class="tool-row">
+
+
+            <div class="tool-box">
+                Python
+            </div>
+
+
+            <div class="tool-box">
+                SQL
+            </div>
+
+
+            <div class="tool-box">
+                Power BI
+            </div>
+
+
+            <div class="tool-box">
+                Excel
+            </div>
+
+
+            <div class="tool-box">
+                Generative AI
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         ABOUT
+    ========================= -->
+
+    <section id="about">
+
+
+        <h2>
+            About Me
+        </h2>
+
+
+        <div class="about">
+
+
+            <p>
+
+                I am a Computer Science graduate
+                currently pursuing an MBA specializing
+                in Operations and Business Analytics.
+                My interests lie at the intersection of
+                Artificial Intelligence, data analytics,
+                product thinking, and business
+                problem-solving.
+
+            </p>
+
+
+            <br>
+
+
+            <p>
+
+                I have worked on machine learning
+                applications, business intelligence
+                dashboards, statistical research,
+                and data-driven projects. I also use
+                generative AI and LLM-based tools for
+                research, analysis, problem-solving,
+                documentation, and productivity.
+
+            </p>
+
+
+            <br>
+
+
+            <p>
+
+                My goal is to apply my technical and
+                business knowledge to develop
+                AI-enabled and data-driven solutions
+                for real-world business problems.
+
+            </p>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         EDUCATION
+    ========================= -->
 
     <section id="education">
 
-        <h2>Education</h2>
+
+        <h2>
+            Education
+        </h2>
+
 
         <div class="grid">
 
+
             <div class="card">
 
-                <h3>MBA</h3>
+
+                <h3>
+                    MBA
+                </h3>
+
 
                 <p>
-                    <strong>Operations & Business Analytics</strong>
+                    <strong>
+                        Operations & Business Analytics
+                    </strong>
                 </p>
 
+
                 <p>
-                    SRM Institute of Science and Technology,
-                    Ramapuram
+                    SRM Institute of Science and
+                    Technology, Ramapuram
                 </p>
+
 
                 <p>
                     2025 – 2027
                 </p>
 
+
+                <p>
+                    <strong>
+                        CGPA: 9.05
+                    </strong>
+                </p>
+
+
             </div>
+
 
 
             <div class="card">
 
-                <h3>B.Sc. Computer Science</h3>
+
+                <h3>
+                    B.Sc. Computer Science
+                </h3>
+
 
                 <p>
-                    <strong>Computer Science</strong>
+                    <strong>
+                        Computer Science
+                    </strong>
                 </p>
+
 
                 <p>
                     Ethiraj College for Women
                 </p>
 
+
                 <p>
                     Percentage: 73.91%
                 </p>
 
+
             </div>
 
+
         </div>
+
 
     </section>
 
 
-    <!-- Skills -->
+
+    <!-- =========================
+         SKILLS
+    ========================= -->
 
     <section id="skills">
 
-        <h2>Skills</h2>
+
+        <h2>
+            Skills
+        </h2>
+
 
         <div class="grid">
 
-            <div class="card skills">
 
-<h3>🤖 AI & Generative AI</h3>
-
-<span>Generative AI</span>
-<span>LLM-based Tools</span>
-<span>Prompt Engineering</span>
-<span>AI-assisted Analytics</span>
-<span>AI Evaluation Concepts</span>
-
-</div>
-
+            <!-- AI -->
 
             <div class="card skills">
 
-                <h3>📊 Data Analytics</h3>
 
-                <span>Microsoft Excel</span>
-                <span>Power BI</span>
-                <span>Tableau</span>
-                <span>SPSS</span>
-                <span>Data Analysis</span>
-                <span>Data Visualization</span>
+                <h3>
+                    🤖 AI & Generative AI
+                </h3>
+
+
+                <span>
+                    Generative AI
+                </span>
+
+
+                <span>
+                    LLM-based Tools
+                </span>
+
+
+                <span>
+                    Prompt Engineering
+                </span>
+
+
+                <span>
+                    AI-assisted Analytics
+                </span>
+
+
+                <span>
+                    AI Evaluation Concepts
+                </span>
+
 
             </div>
 
 
+
+            <!-- DATA -->
+
             <div class="card skills">
 
-                <h3>💼 Business & Product Skills</h3>
 
-<span>Business Analytics</span>
-<span>Operations Management</span>
-<span>Business Problem Solving</span>
-<span>KPI Analysis</span>
-<span>Product Thinking</span>
-<span>Stakeholder Communication</span>
-<span>Data-driven Decision Making</span>
+                <h3>
+                    📊 Data Analytics
+                </h3>
+
+
+                <span>
+                    Microsoft Excel
+                </span>
+
+
+                <span>
+                    Power BI
+                </span>
+
+
+                <span>
+                    Tableau
+                </span>
+
+
+                <span>
+                    SPSS
+                </span>
+
+
+                <span>
+                    Python
+                </span>
+
+
+                <span>
+                    SQL
+                </span>
+
+
+                <span>
+                    Pandas
+                </span>
+
+
+                <span>
+                    NumPy
+                </span>
+
+
+                <span>
+                    Data Analysis
+                </span>
+
+
+                <span>
+                    Data Visualization
+                </span>
+
 
             </div>
+
+
+
+            <!-- ML -->
+
+            <div class="card skills">
+
+
+                <h3>
+                    🧠 Machine Learning
+                </h3>
+
+
+                <span>
+                    Scikit-learn
+                </span>
+
+
+                <span>
+                    Classification
+                </span>
+
+
+                <span>
+                    Predictive Analytics
+                </span>
+
+
+                <span>
+                    Model Evaluation
+                </span>
+
+
+                <span>
+                    Flask
+                </span>
+
+
+                <span>
+                    HTML
+                </span>
+
+
+                <span>
+                    CSS
+                </span>
+
+
+            </div>
+
+
+
+            <!-- BUSINESS -->
+
+            <div class="card skills">
+
+
+                <h3>
+                    💼 Business & Product
+                </h3>
+
+
+                <span>
+                    Business Analytics
+                </span>
+
+
+                <span>
+                    Operations Management
+                </span>
+
+
+                <span>
+                    Product Analytics
+                </span>
+
+
+                <span>
+                    Business Problem Solving
+                </span>
+
+
+                <span>
+                    KPI Analysis
+                </span>
+
+
+                <span>
+                    Stakeholder Communication
+                </span>
+
+
+                <span>
+                    Data-driven Decision Making
+                </span>
+
+
+            </div>
+
 
         </div>
+
 
     </section>
 
 
-    <!-- Projects -->
 
-     <section id="projects">
-    <h2>📂 Projects</h2>
+    <!-- =========================
+         PROJECTS
+    ========================= -->
 
-    <div class="card">
-        <h3>📊 Product Sales & Operational Performance Dashboard</h3>
-        <p>
-            Developed an Excel-based sales analytics dashboard to monitor
-            regional and product performance, order volume, units sold,
-            average order value, return rate, delivery performance,
-            and monthly sales trends.
-        </p>
-        <p><strong>Tools:</strong> Excel | Data Analysis | Data Visualization</p>
-    </div>
+    <section id="projects">
 
-    <div class="card">
-        <h3>📈 Business Performance & Revenue Analytics Dashboard</h3>
-        <p>
-            Developed an interactive Power BI dashboard to analyze revenue,
-            orders, customer performance, regional revenue, and monthly
-            revenue trends through KPI-driven visualizations.
-        </p>
-        <p><strong>Tools:</strong> Power BI | Business Analytics | Data Visualization</p>
-    </div>
 
-    <div class="card">
-        <h3>🧠 Diabetes Prediction System</h3>
-        <p>
-            Developed a machine-learning-based web application for diabetes
-            risk prediction using the Pima Indians Diabetes Dataset.
-            Prepared the dataset, trained classification models, and
-            implemented Logistic Regression as the final model. Deployed
-            the trained model using Flask with an HTML/CSS interface.
-        </p>
-        <p><strong>Tools:</strong> Python | Pandas | Scikit-learn | Flask | HTML | CSS</p>
-    </div>
+        <h2>
+            📂 Projects
+        </h2>
 
-    <div class="card">
-        <h3>🚚 Study on Traffic Congestion in Road Transport</h3>
-        <p>
-            Conducted an MBA research study examining the impact of traffic
-            congestion on transportation costs, fuel consumption, delivery
-            schedules, operational efficiency, and supply chain performance.
-        </p>
-        <p><strong>Tools:</strong> Google Forms | SPSS | Excel | Data Analysis</p>
-    </div>
 
-    <div class="card">
-        <h3>🎮 Python Game Application</h3>
-        <p>
-            Developed a Python-based game/application as an undergraduate
-            project, applying programming logic and user interaction concepts.
-        </p>
-        <p><strong>Tools:</strong> Python</p>
-    </div>
-</section>
 
-    <!-- Certifications -->
+        <!-- Excel -->
+
+        <div class="card project-card">
+
+
+            <h3>
+                📊 Product Sales & Operational
+                Performance Dashboard
+            </h3>
+
+
+            <p>
+
+                Developed an Excel-based sales
+                analytics dashboard to monitor
+                regional and product performance,
+                order volume, units sold, average
+                order value, return rate, delivery
+                performance, and monthly sales trends.
+
+            </p>
+
+
+            <br>
+
+
+            <p>
+
+                <strong>Tools:</strong>
+
+                Excel |
+                Data Analysis |
+                Data Visualization
+
+            </p>
+
+
+        </div>
+
+
+
+        <!-- Power BI -->
+
+        <div class="card project-card">
+
+
+            <h3>
+                📈 Business Performance &
+                Revenue Analytics Dashboard
+            </h3>
+
+
+            <p>
+
+                Developed an interactive Power BI
+                dashboard to analyze revenue, orders,
+                customer performance, regional revenue,
+                and monthly revenue trends through
+                KPI-driven visualizations.
+
+            </p>
+
+
+            <br>
+
+
+            <p>
+
+                <strong>Tools:</strong>
+
+                Power BI |
+                Business Analytics |
+                Data Visualization
+
+            </p>
+
+
+        </div>
+
+
+
+        <!-- Diabetes -->
+
+        <div class="card project-card">
+
+
+            <h3>
+                🧠 Diabetes Prediction System
+            </h3>
+
+
+            <p>
+
+                Developed a machine-learning-based
+                web application for diabetes risk
+                prediction using the Pima Indians
+                Diabetes Dataset.
+
+                Prepared the dataset, trained
+                classification models, and implemented
+                Logistic Regression as the final model.
+
+                Deployed the trained model using Flask
+                with an HTML/CSS interface.
+
+            </p>
+
+
+            <br>
+
+
+            <p>
+
+                <strong>Tools:</strong>
+
+                Python |
+                Pandas |
+                Scikit-learn |
+                Flask |
+                HTML |
+                CSS
+
+            </p>
+
+
+        </div>
+
+
+
+        <!-- Research -->
+
+        <div class="card project-card">
+
+
+            <h3>
+                🚚 Study on Traffic Congestion
+                in Road Transport
+            </h3>
+
+
+            <p>
+
+                Conducted an MBA research study
+                examining the impact of traffic
+                congestion on transportation costs,
+                fuel consumption, delivery schedules,
+                operational efficiency, and supply
+                chain performance.
+
+            </p>
+
+
+            <br>
+
+
+            <p>
+
+                <strong>Tools:</strong>
+
+                Google Forms |
+                SPSS |
+                Excel |
+                Data Analysis
+
+            </p>
+
+
+        </div>
+
+
+
+        <!-- Python -->
+
+        <div class="card project-card">
+
+
+            <h3>
+                🎮 Python Game Application
+            </h3>
+
+
+            <p>
+
+                Developed a Python-based
+                game/application as an undergraduate
+                project, applying programming logic
+                and user interaction concepts.
+
+            </p>
+
+
+            <br>
+
+
+            <p>
+
+                <strong>Tools:</strong>
+
+                Python
+
+            </p>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         CERTIFICATIONS
+    ========================= -->
 
     <section id="certifications">
-    <h2>📜 Certifications & Job Simulations</h2>
 
-<div class="card">
-    <h3>HPE — GenAI Powered Data Analytics Job Simulation</h3>
-    <p>Forage | June 2026</p>
-</div>
 
-<div class="card">
-    <h3>HPE — Digital Sales Job Simulation</h3>
-    <p>Forage | May 2026</p>
-</div>
+        <h2>
+            📜 Certifications & Job Simulations
+        </h2>
 
-<div class="card">
-    <h3>Deloitte — Data Analytics Job Simulation</h3>
-    <p>Forage | March 2026</p>
-</div>
 
-<div class="card">
-    <h3>Business Analytics with Excel</h3>
-    <p>2026</p>
-</div>
-        
-<div class="card">
-    <h3>NPTEL — Fundamentals of Digital Marketing</h3>
-    <p>Course Completion | Score: 78%</p>
-</div>
-</section>
+
+        <div class="grid">
+
+
+            <div class="card">
+
+                <h3>
+                    HPE — GenAI Powered Data Analytics
+                    Job Simulation
+                </h3>
+
+                <p>
+                    Forage | June 2026
+                </p>
+
+            </div>
+
+
+
+            <div class="card">
+
+                <h3>
+                    HPE — Digital Sales
+                    Job Simulation
+                </h3>
+
+                <p>
+                    Forage | May 2026
+                </p>
+
+            </div>
+
+
+
+            <div class="card">
+
+                <h3>
+                    Deloitte — Data Analytics
+                    Job Simulation
+                </h3>
+
+                <p>
+                    Forage | March 2026
+                </p>
+
+            </div>
+
+
+
+            <div class="card">
+
+                <h3>
+                    Business Analytics with Excel
+                </h3>
+
+                <p>
+                    2026
+                </p>
+
+            </div>
+
+
+
+            <div class="card">
+
+                <h3>
+                    NPTEL — Fundamentals of
+                    Digital Marketing
+                </h3>
+
+                <p>
+                    Course Completion |
+                    Score: 78%
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         EXPERIENCE
+    ========================= -->
 
     <section id="experience">
-    <h2>💼 Internship & Experience</h2>
 
-    <div class="card">
-    <h3>SRR Industries — Internship</h3>
-    <p>
-        Gained practical exposure to logistics and supply chain operations,
-        documentation, and the movement of raw materials and finished goods.
-        Worked on documentation-related activities and studied the impact of
-        traffic congestion on road transportation. Collected primary data
-        through Google Forms and analysed the responses using SPSS.
-    </p>
-    <p>
-        <strong>Focus:</strong> Logistics & Supply Chain | Documentation |
-        Data Analysis | SPSS | Research
-    </p>
-</div>
+
+        <h2>
+            💼 Internship & Experience
+        </h2>
+
+
+
+        <!-- SRR -->
+
         <div class="card">
-    <h3>Chennai Port Authority — Web Development Intern</h3>
-    <p>
-        Assisted in developing web pages using HTML and CSS and gained
-        practical exposure to front-end web development and website
-        structure.
-    </p>
-    <p>
-        <strong>Focus:</strong> HTML | CSS | Web Development
-    </p>
-</div>
-        
-<section id="contact">
-    <h2>📩 Contact</h2>
-
-    <div class="card">
-        <h3>Let's Connect</h3>
-        <p>
-            I am open to opportunities and conversations related to
-            AI, data analytics, Product Management, Project Coordinator, business analytics, and AI-driven products.
-        </p>
-
-        <p>
-            📧 Email:
-            <a href="mailto:saravanandikshasri21064@gmail.com">GMail</a>
-        </p>
-
-        <p>
-            💼 LinkedIn:
-            <a href="https://www.linkedin.com/in/dikshasri-saravanan-a45832319 " target="_blank">LinkedIn Profile</a>
-        </p>
-
-        <p>
-            🐙 GitHub:
-            <a href="https://github.com/dikshasri21" target="_blank">
-                GitHub Profile
-            </a>
-        </p>
-    </div>
-</section>
 
 
-    <!-- Footer -->
+            <h3>
+                SRR Industries — Internship
+            </h3>
+
+
+            <p>
+
+                Gained practical exposure to logistics
+                and supply chain operations,
+                documentation, and the movement of
+                raw materials and finished goods.
+
+                Worked on documentation-related
+                activities and studied the impact of
+                traffic congestion on road
+                transportation.
+
+                Collected primary data through
+                Google Forms and analysed the
+                responses using SPSS.
+
+            </p>
+
+
+            <br>
+
+
+            <p>
+
+                <strong>Focus:</strong>
+
+                Logistics & Supply Chain |
+                Documentation |
+                Data Analysis |
+                SPSS |
+                Research
+
+            </p>
+
+
+        </div>
+
+
+
+        <br>
+
+
+
+        <!-- Chennai Port -->
+
+        <div class="card">
+
+
+            <h3>
+                Chennai Port Authority —
+                Web Development Intern
+            </h3>
+
+
+            <p>
+
+                Assisted in developing web pages
+                using HTML and CSS and gained
+                practical exposure to front-end
+                web development and website
+                structure.
+
+            </p>
+
+
+            <br>
+
+
+            <p>
+
+                <strong>Focus:</strong>
+
+                HTML |
+                CSS |
+                Web Development
+
+            </p>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         CONTACT
+    ========================= -->
+
+    <section id="contact" class="contact">
+
+
+        <h2>
+            📩 Contact
+        </h2>
+
+
+        <div class="card">
+
+
+            <h3>
+                Let's Connect
+            </h3>
+
+
+            <br>
+
+
+            <p>
+
+                I am open to opportunities and
+                conversations related to AI,
+                data analytics, Product Management,
+                Project Coordinator, business
+                analytics, and AI-driven products.
+
+            </p>
+
+
+            <br>
+
+
+            <p>
+
+                📧 Email:
+
+                <a href="mailto:saravanandikshasri21064@gmail.com">
+
+                    GMail
+
+                </a>
+
+            </p>
+
+
+            <p>
+
+                💼 LinkedIn:
+
+                <a
+                    href="https://www.linkedin.com/in/dikshasri-saravanan-a45832319"
+                    target="_blank"
+                >
+
+                    LinkedIn Profile
+
+                </a>
+
+            </p>
+
+
+            <p>
+
+                🐙 GitHub:
+
+                <a
+                    href="https://github.com/dikshasri21"
+                    target="_blank"
+                >
+
+                    GitHub Profile
+
+                </a>
+
+            </p>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
 
     <footer>
 
         <p>
-            © 2026 Dikshasri S | Professional Portfolio
+            © 2026 Dikshasri S |
+            Professional Portfolio
         </p>
 
     </footer>
 
+
 </body>
+
 </html>
