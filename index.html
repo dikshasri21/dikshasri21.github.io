@@ -6,15 +6,13 @@
 <title>Dikshasri S | Portfolio</title>
 <meta name="description" content="MBA (Operations & Business Analytics) and B.Sc. Computer Science. Data analytics, AI and product thinking. Play my games and explore my projects.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#F6F4FF;--card:#fff;--ink:#1E1B3F;--mute:#5E5B80;--line:#E2DEF5;--accent:#6A4DF4;--accent2:#12B5A5;--sun:#FFC95C;--shadow:0 10px 30px rgba(60,40,140,.10)}
-@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#13112B;--card:#1D1A3F;--ink:#F1EFFF;--mute:#A9A5D0;--line:#2F2B5E;--shadow:0 10px 30px rgba(0,0,0,.35)}}
-:root[data-theme=dark]{--bg:#13112B;--card:#1D1A3F;--ink:#F1EFFF;--mute:#A9A5D0;--line:#2F2B5E;--shadow:0 10px 30px rgba(0,0,0,.35)}
+:root{--bg:#F4ECDF;--card:#fff;--ink:#2A2722;--mute:#6B655A;--line:#E6D9C4;--accent:#2F4A3A;--accent2:#6F8A5E;--sun:#C9A45C;--shadow:0 12px 32px rgba(47,74,58,.10)}
 *{box-sizing:border-box;margin:0}
 html{scroll-behavior:smooth;scroll-padding-top:76px}
 body{font-family:'DM Sans',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;font-size:17px}
-h1,h2,h3{font-family:'Bricolage Grotesque','DM Sans',sans-serif;line-height:1.15;letter-spacing:-.02em}
+h1,h2,h3{font-family:'Fraunces','DM Sans',sans-serif;line-height:1.15;letter-spacing:-.02em}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
 .wrap{max-width:1120px;margin:0 auto;padding:0 22px}
@@ -24,7 +22,7 @@ h2{font-size:clamp(2rem,4vw,2.8rem);margin-bottom:10px}
 /* nav */
 header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 nav{display:flex;align-items:center;justify-content:space-between;height:64px}
-.logo{font-family:'Bricolage Grotesque';font-weight:800;font-size:1.25rem;text-decoration:none}
+.logo{font-family:'Fraunces';font-weight:800;font-size:1.25rem;text-decoration:none}
 .logo b{color:var(--accent)}
 .links{display:flex;gap:4px;align-items:center}
 .links a{text-decoration:none;font-size:.93rem;padding:7px 12px;border-radius:99px;color:var(--mute);font-weight:500}
@@ -52,7 +50,7 @@ nav{display:flex;align-items:center;justify-content:space-between;height:64px}
 .photo img{position:relative;z-index:1;width:100%;aspect-ratio:1;object-fit:cover;border-radius:44% 56% 52% 48%/48% 44% 56% 52%;border:4px solid var(--card);box-shadow:var(--shadow)}
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:50px}
 .stat{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;text-align:center}
-.stat b{font-family:'Bricolage Grotesque';font-size:2rem;color:var(--accent);display:block}
+.stat b{font-family:'Fraunces';font-size:2rem;color:var(--accent);display:block}
 .stat small{color:var(--mute)}
 @media(max-width:800px){.hero-grid{grid-template-columns:1fr}.photo{order:-1;width:min(240px,70%)}.stats{grid-template-columns:1fr 1fr}}
 /* cards */
@@ -76,38 +74,37 @@ nav{display:flex;align-items:center;justify-content:space-between;height:64px}
 .proj .go{margin-top:auto;align-self:flex-start;background:none;border:0;color:var(--accent);font:inherit;font-weight:700;cursor:pointer;padding:0}
 .hide{display:none!important}
 /* arcade */
-.arcade{background:var(--ink);color:var(--bg);border-radius:28px;padding:34px;margin-top:10px}
-:root[data-theme=dark] .arcade,.arcade{--ink2:#fff}
-.arcade h3{font-size:1.6rem;color:#fff}
-.arcade p{color:#cfcaf5}
+.arcade{background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);color:var(--ink);border-radius:28px;padding:34px;margin-top:10px}
+.arcade h3{font-size:1.6rem;color:var(--ink)}
+.arcade p{color:var(--mute)}
 .tabs{display:flex;gap:8px;margin:18px 0;flex-wrap:wrap}
-.tabs button{background:rgba(255,255,255,.1);border:0;color:#fff;padding:9px 18px;border-radius:99px;cursor:pointer;font:inherit;font-weight:600}
-.tabs button.on{background:var(--sun);color:#1E1B3F}
+.tabs button{background:var(--bg);border:1px solid var(--line);color:var(--ink);padding:9px 18px;border-radius:99px;cursor:pointer;font:inherit;font-weight:600}
+.tabs button.on{background:var(--accent);border-color:var(--accent);color:#fff}
 .tabs button:disabled{opacity:.45;cursor:not-allowed}
 .game{display:none;text-align:center}
 .game.on{display:block}
 .board{display:grid;grid-template-columns:repeat(3,92px);gap:8px;justify-content:center;margin:18px 0}
-.cell{height:92px;border:0;border-radius:16px;background:rgba(255,255,255,.12);color:#fff;font-size:2.6rem;font-weight:800;cursor:pointer;font-family:'Bricolage Grotesque'}
+.cell{height:92px;border:0;border-radius:16px;background:rgba(255,255,255,.12);color:#fff;font-size:2.6rem;font-weight:800;cursor:pointer;font-family:'Fraunces'}
 .cell:hover:not(:disabled){background:rgba(255,255,255,.22)}
 .cell.x{color:var(--sun)}.cell.o{color:#5EEAD4}
-.msg{min-height:1.8em;font-weight:700;color:#fff;font-size:1.1rem}
+.msg{min-height:1.8em;font-weight:700;color:var(--ink);font-size:1.1rem}
 .opts{display:flex;gap:12px;justify-content:center;margin:16px 0}
 .opts button{font-size:2.4rem;width:84px;height:84px;border-radius:50%;border:0;background:rgba(255,255,255,.12);cursor:pointer}
 .opts button:hover{background:rgba(255,255,255,.25);transform:scale(1.06)}
-.game input{padding:11px 16px;border-radius:12px;border:0;font:inherit;width:120px;text-align:center;margin-right:8px}
-.small{background:var(--sun);color:#1E1B3F;border:0;padding:11px 20px;border-radius:12px;font-weight:700;cursor:pointer;font:inherit;font-weight:700}
-.score{color:#cfcaf5;font-size:.95rem}
+.game input{padding:11px 16px;border-radius:12px;border:2px solid var(--line);background:var(--bg);color:var(--ink);font:inherit;width:120px;text-align:center;margin-right:8px}
+.small{background:var(--accent);color:#fff;border:0;padding:11px 20px;border-radius:12px;font-weight:700;cursor:pointer;font:inherit;font-weight:700}
+.score{color:var(--mute);font-size:.95rem}
 .mgrid{display:grid;grid-template-columns:repeat(4,72px);gap:10px;justify-content:center;margin:18px 0}
-.mc{height:72px;border:0;border-radius:14px;background:linear-gradient(135deg,var(--accent),#9B84FF);color:#fff;font-size:1.8rem;font-weight:800;cursor:pointer;transition:transform .2s}
+.mc{height:72px;border:0;border-radius:14px;background:linear-gradient(135deg,var(--accent),#5E8A6E);color:#fff;font-size:1.8rem;font-weight:800;cursor:pointer;transition:transform .2s}
 .mc:hover{transform:translateY(-3px)}
-.mc.up{background:#fff;color:#1E1B3F;transform:none}
-.mc.done{background:#5EEAD4;color:#1E1B3F;cursor:default}
-.cword{font-family:'Bricolage Grotesque';font-size:clamp(2.2rem,8vw,3.6rem);font-weight:800;background:#F3F1FF;color:#1E1B3F;border-radius:18px;padding:22px 10px;margin:14px auto;max-width:420px}
+.mc.up{background:var(--bg);color:var(--ink);box-shadow:inset 0 0 0 2px var(--sun);transform:none}
+.mc.done{background:#D5E5C9;color:var(--ink);cursor:default}
+.cword{font-family:'Fraunces';font-size:clamp(2.2rem,8vw,3.6rem);font-weight:800;background:#FFFDF8;border:1px solid var(--line);color:var(--ink);border-radius:18px;padding:22px 10px;margin:14px auto;max-width:420px}
 /* demo */
 .demo label{display:block;margin:14px 0 4px;font-weight:500}
 .demo input[type=range]{width:100%;accent-color:var(--accent)}
 .meter{height:16px;border-radius:99px;background:var(--line);overflow:hidden;margin:18px 0 8px}
-.meter i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--accent2),var(--sun),#F0507A);transition:width .4s}
+.meter i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--accent2),var(--sun),#C0663F);transition:width .4s}
 /* timeline */
 .tl{border-left:3px solid var(--accent);padding-left:26px;display:grid;gap:22px}
 .tl .card{position:relative}
@@ -120,6 +117,14 @@ nav{display:flex;align-items:center;justify-content:space-between;height:64px}
 /* contact */
 .contact{text-align:center}
 .contact .btns{justify-content:center}
+main section:nth-child(even){background:#fff;--card:#FAF4E8}
+.hero{background:radial-gradient(circle at 85% 15%,#fff 0,transparent 55%)}
+h2::after{content:"";display:block;width:56px;height:4px;border-radius:4px;background:var(--sun);margin-top:12px}
+.contact h2::after{margin-inline:auto}
+.pill{display:inline-block;background:#fff;border:1px solid var(--line);padding:5px 14px;border-radius:99px;font-size:.88rem;font-weight:500;margin-bottom:14px}
+.pill::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:#4CAF50;margin-right:8px}
+.card{transition:transform .2s,box-shadow .2s}
+.proj:hover,.cert:hover,.skill:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(47,74,58,.18)}
 footer{padding:30px 0;text-align:center;color:var(--mute);border-top:1px solid var(--line);font-size:.92rem}
 /* lightbox */
 #lb{position:fixed;inset:0;background:rgba(10,8,30,.9);display:none;place-items:center;z-index:100;padding:20px;cursor:zoom-out}
@@ -136,14 +141,14 @@ footer{padding:30px 0;text-align:center;color:var(--mute);border-top:1px solid v
 <div class="links" id="links">
 <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#arcade">Play</a><a href="#experience">Experience</a><a href="#certs">Certifications</a><a href="#contact">Contact</a>
 </div>
-<div><button class="icon-btn" id="theme" aria-label="Switch light or dark theme">◐</button> <button class="icon-btn" id="burger" aria-label="Open menu">☰</button></div>
+<div><button class="icon-btn" id="burger" aria-label="Open menu">☰</button></div>
 </nav></div></header>
 
 <main>
 <section class="hero" id="home"><div class="wrap">
 <div class="hero-grid">
 <div>
-<p class="meta">Hello, I’m</p>
+<span class="pill">Open to opportunities</span><p class="meta">Hello, I’m</p>
 <h1>Dikshasri S<span>I turn data into decisions.</span></h1>
 <p class="role" id="typed">MBA – Operations & Business Analytics</p>
 <p class="lead">MBA student with a B.Sc. in Computer Science, interested in AI, data analytics, product analytics and solving real business problems with technology.</p>
@@ -259,9 +264,7 @@ footer{padding:30px 0;text-align:center;color:var(--mute);border-top:1px solid v
 
 <script>
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
-// theme + menu
-try{const t=localStorage.getItem('t');if(t)document.documentElement.dataset.theme=t}catch(e){}
-$('#theme').onclick=()=>{const d=document.documentElement,cur=d.dataset.theme||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'),n=cur==='dark'?'light':'dark';d.dataset.theme=n;try{localStorage.setItem('t',n)}catch(e){}};
+// menu
 $('#burger').onclick=()=>$('#links').classList.toggle('open');
 $$('#links a').forEach(a=>a.onclick=()=>$('#links').classList.remove('open'));
 // active link + back to top
@@ -299,12 +302,12 @@ $$('#lvtabs button').forEach((b,i)=>b.onclick=()=>{lvl=i;mem()});
 $('#mnext').onclick=()=>{lvl++;mem()};
 $('#mreset').onclick=mem;mem();
 // color game
-const CN=[['red','#E53935'],['blue','#1E66F5'],['green','#2EA043'],['yellow','#E6B800'],['orange','#F57C00'],['purple','#8E44AD'],['pink','#EC4899'],['brown','#8B5A2B']];
+const CN=[['red','#E53935'],['blue','#1E66F5'],['green','#2EA043'],['yellow','#D9A400'],['orange','#F57C00'],['purple','#8E44AD'],['pink','#EC4899'],['brown','#8B5A2B']];
 const NEU=['Python','Data','Excel','Power BI','Analytics','Portfolio'],CL=[{t:45,p:20,m:0},{t:60,p:30,m:1}],CNM=['Level 1 · 45 sec','Level 2 · 1 min'];
 let cl=0,cu=0,cs=0,ans='',tm=null,left=0;
 function ctabs(){$$('#ctabs button').forEach((b,i)=>{b.classList.toggle('on',i===cl);b.disabled=i>cu||!!tm;b.textContent=(i>cu?'🔒 ':'')+CNM[i]})}
 function nextWord(){const c=CN[Math.floor(Math.random()*8)];let w;if(CL[cl].m){const o=CN.filter(x=>x!==c);w=o[Math.floor(Math.random()*o.length)][0].toUpperCase()}else w=NEU[Math.floor(Math.random()*NEU.length)];ans=c[0];$('#cw').textContent=w;$('#cw').style.color=c[1]}
-function cidle(){clearInterval(tm);tm=null;cs=0;left=CL[cl].t;$('#ct').textContent=left;$('#cs').textContent=0;$('#ctg').textContent='/'+CL[cl].p;$('#cw').textContent='Ready?';$('#cw').style.color='#1E1B3F';$('#ci').disabled=true;$('#ci').value='';$('#cgo').textContent='Start';$('#cm').textContent='Level '+(cl+1)+': reach a score of '+CL[cl].p+' before time runs out.';ctabs()}
+function cidle(){clearInterval(tm);tm=null;cs=0;left=CL[cl].t;$('#ct').textContent=left;$('#cs').textContent=0;$('#ctg').textContent='/'+CL[cl].p;$('#cw').textContent='Ready?';$('#cw').style.color='#2A2722';$('#ci').disabled=true;$('#ci').value='';$('#cgo').textContent='Start';$('#cm').textContent='Level '+(cl+1)+': reach a score of '+CL[cl].p+' before time runs out.';ctabs()}
 function cend(ok){const sc=cs,lf=left;cidle();$('#cs').textContent=sc;let m=ok?'Target reached with '+lf+'s left! ':'Time’s up! You scored '+sc+'. ';
 if(ok){if(cl<1){cu=Math.max(cu,cl+1);m+='Level '+(cl+2)+' unlocked 🎉'}else m+='Both levels complete! 🏆'}else m+='You need '+CL[cl].p+' to pass. Try again!';
 $('#cm').textContent=m;ctabs()}
