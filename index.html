@@ -1,1934 +1,317 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Dikshasri S | Portfolio</title>
-
-    <style>
-
-        /* =========================
-           BASIC RESET
-        ========================= */
-
-        body {
-    margin: 0;
-    padding: 0;
-    background: #fffdf9;
-    color: #3d3027;
-    font-family: Arial, sans-serif;
-    overflow-x: hidden;
-}
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #3d3027;
-            background: #fffdf9;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-
-        /* =========================
-           NAVIGATION
-        ========================= */
-
-        nav {
-            width: 90%;
-            max-width: 1250px;
-
-            margin: 18px auto;
-
-            padding: 18px 32px;
-
-            background: rgba(255, 250, 243, 0.96);
-
-            border: 1px solid #eee1d2;
-
-            border-radius: 15px;
-
-            display: flex;
-
-            justify-content: space-between;
-
-            align-items: center;
-
-            position: sticky;
-
-            top: 15px;
-
-            z-index: 1000;
-
-            box-shadow:
-                0 8px 25px rgba(107, 78, 52, 0.08);
-        }
-        nav {
-    transition: transform 0.3s ease;
-}
-
-nav.nav-hidden {
-    transform: translateY(-120%);
-}
-
-
-        nav h2 {
-            color: #3b2a20;
-
-            font-size: 23px;
-        }
-
-
-        nav div {
-            display: flex;
-
-            align-items: center;
-
-            gap: 25px;
-        }
-
-
-        nav a {
-            color: #3d3027;
-
-            font-size: 14px;
-
-            padding: 8px 3px;
-
-            transition: 0.3s;
-        }
-
-
-        nav a:hover {
-            color: #a66b35;
-        }
-
-
-        /* =========================
-           WELCOME SECTION
-        ========================= */
-
-        .welcome {
-            max-width: 1250px;
-
-            min-height: 580px;
-
-            margin: auto;
-
-            padding: 80px 65px 45px;
-
-            display: grid;
-
-            grid-template-columns: 1.1fr 0.9fr;
-
-            align-items: center;
-
-            gap: 50px;
-
-            position: relative;
-        }
-
-
-        .welcome-content {
-            max-width: 700px;
-        }
-
-
-        .welcome-label {
-            color: #8b6545;
-
-            font-size: 14px;
-
-            letter-spacing: 4px;
-
-            font-weight: bold;
-
-            margin-bottom: 18px;
-
-            text-transform: uppercase;
-        }
-
-
-        .welcome-label span {
-            display: inline-block;
-
-            width: 65px;
-
-            height: 2px;
-
-            background: #b17a45;
-
-            margin-left: 12px;
-
-            vertical-align: middle;
-        }
-
-
-        .welcome h1 {
-            font-size: 58px;
-
-            line-height: 1.05;
-
-            margin-bottom: 20px;
-
-            color: #30251f;
-        }
-
-
-        .welcome h1 span {
-            color: #a96f38;
-        }
-
-
-        .welcome h3 {
-            font-size: 21px;
-
-            font-weight: normal;
-
-            line-height: 1.5;
-
-            color: #2f2924;
-
-            margin-bottom: 20px;
-        }
-
-
-        .welcome p {
-            max-width: 700px;
-
-            font-size: 17px;
-
-            color: #77706a;
-
-            margin-bottom: 30px;
-        }
-
-
-        /* =========================
-           BUTTON
-        ========================= */
-
-        .welcome-button {
-            display: inline-block;
-
-            background: #ad7540;
-
-            color: white;
-
-            padding: 15px 28px;
-
-            border-radius: 8px;
-
-            font-weight: bold;
-
-            font-size: 15px;
-
-            box-shadow:
-                0 8px 20px rgba(173, 117, 64, 0.22);
-
-            transition: 0.3s;
-        }
-
-
-        .welcome-button:hover {
-            background: #8f5c2f;
-
-            transform: translateY(-3px);
-
-            box-shadow:
-                0 12px 25px rgba(173, 117, 64, 0.30);
-        }
-
-
-        /* =========================
-           PROFILE PHOTO
-        ========================= */
-
-        .welcome-image {
-            display: flex;
-
-            justify-content: center;
-
-            align-items: center;
-
-            position: relative;
-        }
-
-
-        .welcome-image::before {
-            content: "";
-
-            position: absolute;
-
-            width: 390px;
-
-            height: 390px;
-
-            border-radius: 50%;
-
-            border: 2px solid #ead8c4;
-
-            transform: rotate(-7deg);
-        }
-
-
-        .welcome-image img {
-    width: 350px;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 10px solid #fffaf4;
-    box-shadow: 0 8px 30px rgba(92, 65, 43, 0.15);
-    position: relative;
-    z-index: 2;
-}
-
-.photo-placeholder {
-    width: 350px;
-    height: 350px;
-    border-radius: 50%;
-    background: #f7eee4;
-    border: 10px solid #fffaf4;
-    box-shadow: 0 8px 30px rgba(92, 65, 43, 0.15);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #a96f38;
-    font-size: 24px;
-    font-weight: bold;
-    position: relative;
-    z-index: 2;
-}
-        /* =========================
-           TOOLS
-        ========================= */
-
-        .worked-with {
-            max-width: 1250px;
-
-            margin: auto;
-
-            padding: 15px 65px 70px;
-        }
-
-
-        .section-label {
-            font-size: 24px;
-
-            font-weight: bold;
-
-            color: #30251f;
-
-            margin-bottom: 22px;
-        }
-
-
-        .section-label span {
-            display: inline-block;
-
-            width: 55px;
-
-            height: 2px;
-
-            background: #b17a45;
-
-            margin-left: 12px;
-
-            vertical-align: middle;
-        }
-
-
-        .tool-row {
-            display: grid;
-
-            grid-template-columns:
-                repeat(5, 1fr);
-
-            gap: 18px;
-        }
-
-
-        .tool-box {
-            background: #fffdfa;
-
-            border: 1px solid #eee2d5;
-
-            border-radius: 12px;
-
-            padding: 23px 15px;
-
-            text-align: center;
-
-            color: #49392d;
-
-            font-weight: bold;
-
-            box-shadow:
-                0 5px 18px rgba(99, 73, 50, 0.06);
-
-            transition: 0.3s;
-        }
-
-
-        .tool-box:hover {
-            transform: translateY(-4px);
-
-            border-color: #d8b892;
-
-            box-shadow:
-                0 10px 25px rgba(99, 73, 50, 0.10);
-        }
-
-
-        /* =========================
-           GENERAL SECTIONS
-        ========================= */
-
-        section:not(.welcome) {
-    width: 100%;
-    max-width: 1250px;
-    margin: 0 auto;
-    padding: 70px 40px;
-    box-sizing: border-box;
-}
-
-
-        section h2 {
-            font-size: 28px;
-
-            color: #30251f;
-
-            margin-bottom: 30px;
-
-            text-align: left;
-        }
-
-
-        section h2::after {
-            content: "";
-
-            display: inline-block;
-
-            width: 55px;
-
-            height: 2px;
-
-            background: #b17a45;
-
-            margin-left: 15px;
-
-            vertical-align: middle;
-        }
-
-
-        /* =========================
-           ABOUT
-        ========================= */
-
-        .about {
-            max-width: 1100px;
-
-            margin: auto;
-
-            padding: 30px 35px;
-
-            background: #fdf8f1;
-
-            border: 1px solid #eee2d5;
-
-            border-radius: 14px;
-
-            color: #69615b;
-
-            font-size: 16px;
-
-            box-shadow:
-                0 5px 20px rgba(95, 70, 48, 0.05);
-        }
-
-
-        .about p {
-            margin-bottom: 10px;
-        }
-
-
-        /* =========================
-           GRID
-        ========================= */
-
-        .grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 25px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-
-        /* =========================
-           CARDS
-        ========================= */
-
-        .card {
-    background: #fffdfa;
-    padding: 28px;
-    border-radius: 14px;
-    border: 1px solid #eee2d5;
-    box-shadow: 0 5px 18px rgba(95, 70, 48, 0.06);
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.card:hover {
-    transform: translateY(-4px);
-    border-color: #d8b892;
-    box-shadow: 0 10px 25px rgba(95, 70, 48, 0.10);
-}
-
-.card h3 {
-    color: #8e5e35;
-    margin-bottom: 12px;
-    font-size: 18px;
-}
-
-.card p {
-    color: #6e6862;
-    margin-bottom: 7px;
-}
-
-
-        /* =========================
-           SKILLS
-        ========================= */
-
-        .skills span {
-            display: inline-block;
-
-            background: #f7eee4;
-
-            color: #775333;
-
-            padding: 8px 13px;
-
-            border-radius: 20px;
-
-            margin: 4px;
-
-            font-size: 13px;
-
-            border: 1px solid #eadac9;
-        }
-
-
-        .skills span:hover {
-            background: #ead4ba;
-
-            color: #5d3d22;
-        }
-
-
-        /* =========================
-           PROJECTS
-        ========================= */
-
-        .project-card {
-            background: #fffdfa;
-
-            padding: 25px;
-
-            margin-bottom: 18px;
-
-            border-left: 4px solid #b17a45;
-
-            border-radius: 10px;
-
-            border-top: 1px solid #eee2d5;
-
-            border-right: 1px solid #eee2d5;
-
-            border-bottom: 1px solid #eee2d5;
-        }
-
-
-        .project-card h3 {
-            color: #8e5e35;
-        }
-
-
-        /* =========================
-           CERTIFICATIONS
-        ========================= */
-
-        #certifications .card h3 {
-            color: #5f4835;
-        }
-
-
-        /* =========================
-           EXPERIENCE
-        ========================= */
-
-        #experience .card {
-            margin-bottom: 18px;
-        }
-
-
-        /* =========================
-           CONTACT
-        ========================= */
-
-        .contact {
-            background: #f8efe4;
-
-            border: 1px solid #ead8c4;
-
-            border-radius: 15px;
-
-            margin-bottom: 50px;
-        }
-
-
-        .contact h2 {
-            color: #4a3424;
-        }
-
-
-        .contact a {
-            color: #9a6331;
-
-            font-weight: bold;
-        }
-
-
-        .contact a:hover {
-            color: #70451f;
-
-            text-decoration: underline;
-        }
-
-
-        /* =========================
-           FOOTER
-        ========================= */
-
-        footer {
-            text-align: center;
-
-            padding: 22px;
-
-            background: #f6ede3;
-
-            color: #756b62;
-
-            border-top: 1px solid #eadfd3;
-        }
-
-
-        /* =========================
-           DECORATIVE BACKGROUND
-        ========================= */
-
-        body::before {
-            content: "";
-
-            position: fixed;
-
-            width: 250px;
-
-            height: 250px;
-
-            background: #f8eee3;
-
-            border-radius: 50%;
-
-            left: -160px;
-
-            top: 350px;
-
-            z-index: -1;
-        }
-
-
-        body::after {
-            content: "";
-
-            position: fixed;
-
-            width: 300px;
-
-            height: 300px;
-
-            background: #fbf2e8;
-
-            border-radius: 50%;
-
-            right: -180px;
-
-            bottom: 100px;
-
-            z-index: -1;
-        }
-
-
-        /* =========================
-           MOBILE
-        ========================= */
-
-        @media (max-width: 900px) {
-
-            nav {
-                width: 94%;
-
-                flex-direction: column;
-
-                gap: 15px;
-
-                padding: 18px;
-            }
-
-
-            nav div {
-                flex-wrap: wrap;
-
-                justify-content: center;
-
-                gap: 12px;
-            }
-
-
-            .welcome {
-                grid-template-columns: 1fr;
-
-                text-align: center;
-
-                padding: 70px 25px 40px;
-            }
-
-
-            .welcome-content {
-                margin: auto;
-            }
-
-
-            .welcome p {
-                margin-left: auto;
-
-                margin-right: auto;
-            }
-
-
-            .welcome-image {
-                margin-top: 30px;
-
-                order: -1;
-            }
-
-
-            .welcome-image img {
-                width: 270px;
-
-                height: 270px;
-            }
-
-
-            .welcome-image::before {
-                width: 300px;
-
-                height: 300px;
-            }
-
-
-            .welcome h1 {
-                font-size: 42px;
-            }
-
-
-            .tool-row {
-                grid-template-columns:
-                    repeat(2, 1fr);
-            }
-
-
-            .worked-with {
-                padding:
-                    20px 25px 50px;
-            }
-
-
-            section:not(.welcome) {
-                padding: 60px 25px;
-            }
-
-        }
-
-
-        @media (max-width: 550px) {
-
-            .welcome h1 {
-                font-size: 35px;
-            }
-
-
-            .welcome h3 {
-                font-size: 18px;
-            }
-
-
-            .tool-row {
-                grid-template-columns: 1fr;
-            }
-
-
-            nav a {
-                font-size: 12px;
-            }
-
-        }
-
-    </style>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dikshasri S | Portfolio</title>
+<meta name="description" content="MBA (Operations & Business Analytics) and B.Sc. Computer Science. Data analytics, AI and product thinking. Play my games and explore my projects.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F6F4FF;--card:#fff;--ink:#1E1B3F;--mute:#5E5B80;--line:#E2DEF5;--accent:#6A4DF4;--accent2:#12B5A5;--sun:#FFC95C;--shadow:0 10px 30px rgba(60,40,140,.10)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#13112B;--card:#1D1A3F;--ink:#F1EFFF;--mute:#A9A5D0;--line:#2F2B5E;--shadow:0 10px 30px rgba(0,0,0,.35)}}
+:root[data-theme=dark]{--bg:#13112B;--card:#1D1A3F;--ink:#F1EFFF;--mute:#A9A5D0;--line:#2F2B5E;--shadow:0 10px 30px rgba(0,0,0,.35)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:'DM Sans',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;font-size:17px}
+h1,h2,h3{font-family:'Bricolage Grotesque','DM Sans',sans-serif;line-height:1.15;letter-spacing:-.02em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+section{padding:84px 0}
+h2{font-size:clamp(2rem,4vw,2.8rem);margin-bottom:10px}
+.sub{color:var(--mute);max-width:60ch;margin-bottom:36px}
+/* nav */
+header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:'Bricolage Grotesque';font-weight:800;font-size:1.25rem;text-decoration:none}
+.logo b{color:var(--accent)}
+.links{display:flex;gap:4px;align-items:center}
+.links a{text-decoration:none;font-size:.93rem;padding:7px 12px;border-radius:99px;color:var(--mute);font-weight:500}
+.links a:hover,.links a.on{background:var(--accent);color:#fff}
+.icon-btn{background:var(--card);border:1px solid var(--line);color:var(--ink);width:38px;height:38px;border-radius:50%;cursor:pointer;font-size:1.05rem}
+#burger{display:none}
+@media(max-width:900px){#burger{display:inline-block}.links{position:absolute;top:64px;left:0;right:0;flex-direction:column;background:var(--bg);padding:12px;border-bottom:1px solid var(--line);display:none}.links.open{display:flex}}
+/* hero */
+.hero{padding:70px 0 40px}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(2.6rem,6.5vw,4.6rem);font-weight:800}
+.hero h1 span{display:block;color:var(--accent)}
+.role{font-weight:700;margin:16px 0 10px;color:var(--accent2)}
+.hero p.lead{color:var(--mute);max-width:54ch}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0}
+.btn{display:inline-block;padding:13px 24px;border-radius:99px;font-weight:700;text-decoration:none;border:2px solid var(--accent);cursor:pointer;font:inherit;font-weight:700}
+.btn.p{background:var(--accent);color:#fff}
+.btn.p:hover{filter:brightness(1.1)}
+.btn.s{background:transparent;color:var(--accent)}
+.btn.s:hover{background:var(--accent);color:#fff}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:var(--card);border:1px solid var(--line);padding:5px 14px;border-radius:99px;font-size:.88rem;font-weight:500}
+.photo{position:relative;justify-self:center;width:min(340px,80%)}
+.photo::before{content:"";position:absolute;inset:-14px -14px 14px 14px;background:var(--sun);border-radius:44% 56% 52% 48%/48% 44% 56% 52%;z-index:0}
+.photo img{position:relative;z-index:1;width:100%;aspect-ratio:1;object-fit:cover;border-radius:44% 56% 52% 48%/48% 44% 56% 52%;border:4px solid var(--card);box-shadow:var(--shadow)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:50px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;text-align:center}
+.stat b{font-family:'Bricolage Grotesque';font-size:2rem;color:var(--accent);display:block}
+.stat small{color:var(--mute)}
+@media(max-width:800px){.hero-grid{grid-template-columns:1fr}.photo{order:-1;width:min(240px,70%)}.stats{grid-template-columns:1fr 1fr}}
+/* cards */
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px;box-shadow:var(--shadow)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.three{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+@media(max-width:800px){.two{grid-template-columns:1fr}}
+.tag{display:inline-block;background:color-mix(in srgb,var(--accent) 14%,transparent);color:var(--accent);padding:3px 11px;border-radius:99px;font-size:.8rem;font-weight:700;margin:3px 4px 3px 0}
+.meta{color:var(--mute);font-size:.93rem}
+/* skills */
+.skill h3{font-size:1.15rem;margin-bottom:12px}
+/* filters */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
+.filters button{background:var(--card);border:1px solid var(--line);color:var(--ink);padding:8px 18px;border-radius:99px;cursor:pointer;font:inherit;font-weight:500}
+.filters button.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+.proj{display:flex;flex-direction:column;gap:12px;padding:0;overflow:hidden}
+.proj .body{padding:0 24px 24px;display:flex;flex-direction:column;gap:10px;flex:1}
+.proj img.shot{width:100%;height:210px;object-fit:cover;object-position:top;cursor:zoom-in;border-bottom:1px solid var(--line);background:var(--line)}
+.proj .noimg{height:210px;display:grid;place-items:center;font-size:4rem;background:linear-gradient(135deg,var(--accent),var(--accent2))}
+.proj h3{font-size:1.25rem}
+.proj .go{margin-top:auto;align-self:flex-start;background:none;border:0;color:var(--accent);font:inherit;font-weight:700;cursor:pointer;padding:0}
+.hide{display:none!important}
+/* arcade */
+.arcade{background:var(--ink);color:var(--bg);border-radius:28px;padding:34px;margin-top:10px}
+:root[data-theme=dark] .arcade,.arcade{--ink2:#fff}
+.arcade h3{font-size:1.6rem;color:#fff}
+.arcade p{color:#cfcaf5}
+.tabs{display:flex;gap:8px;margin:18px 0;flex-wrap:wrap}
+.tabs button{background:rgba(255,255,255,.1);border:0;color:#fff;padding:9px 18px;border-radius:99px;cursor:pointer;font:inherit;font-weight:600}
+.tabs button.on{background:var(--sun);color:#1E1B3F}
+.tabs button:disabled{opacity:.45;cursor:not-allowed}
+.game{display:none;text-align:center}
+.game.on{display:block}
+.board{display:grid;grid-template-columns:repeat(3,92px);gap:8px;justify-content:center;margin:18px 0}
+.cell{height:92px;border:0;border-radius:16px;background:rgba(255,255,255,.12);color:#fff;font-size:2.6rem;font-weight:800;cursor:pointer;font-family:'Bricolage Grotesque'}
+.cell:hover:not(:disabled){background:rgba(255,255,255,.22)}
+.cell.x{color:var(--sun)}.cell.o{color:#5EEAD4}
+.msg{min-height:1.8em;font-weight:700;color:#fff;font-size:1.1rem}
+.opts{display:flex;gap:12px;justify-content:center;margin:16px 0}
+.opts button{font-size:2.4rem;width:84px;height:84px;border-radius:50%;border:0;background:rgba(255,255,255,.12);cursor:pointer}
+.opts button:hover{background:rgba(255,255,255,.25);transform:scale(1.06)}
+.game input{padding:11px 16px;border-radius:12px;border:0;font:inherit;width:120px;text-align:center;margin-right:8px}
+.small{background:var(--sun);color:#1E1B3F;border:0;padding:11px 20px;border-radius:12px;font-weight:700;cursor:pointer;font:inherit;font-weight:700}
+.score{color:#cfcaf5;font-size:.95rem}
+.mgrid{display:grid;grid-template-columns:repeat(4,72px);gap:10px;justify-content:center;margin:18px 0}
+.mc{height:72px;border:0;border-radius:14px;background:linear-gradient(135deg,var(--accent),#9B84FF);color:#fff;font-size:1.8rem;font-weight:800;cursor:pointer;transition:transform .2s}
+.mc:hover{transform:translateY(-3px)}
+.mc.up{background:#fff;color:#1E1B3F;transform:none}
+.mc.done{background:#5EEAD4;color:#1E1B3F;cursor:default}
+/* demo */
+.demo label{display:block;margin:14px 0 4px;font-weight:500}
+.demo input[type=range]{width:100%;accent-color:var(--accent)}
+.meter{height:16px;border-radius:99px;background:var(--line);overflow:hidden;margin:18px 0 8px}
+.meter i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--accent2),var(--sun),#F0507A);transition:width .4s}
+/* timeline */
+.tl{border-left:3px solid var(--accent);padding-left:26px;display:grid;gap:22px}
+.tl .card{position:relative}
+.tl .card::before{content:"";position:absolute;left:-37px;top:30px;width:16px;height:16px;border-radius:50%;background:var(--sun);border:3px solid var(--accent)}
+/* certs */
+.cert{padding:0;overflow:hidden}
+.cert img{width:100%;height:170px;object-fit:cover;cursor:zoom-in;border-bottom:1px solid var(--line)}
+.cert div{padding:16px 20px 20px}
+.cert h3{font-size:1.02rem}
+/* contact */
+.contact{text-align:center}
+.contact .btns{justify-content:center}
+footer{padding:30px 0;text-align:center;color:var(--mute);border-top:1px solid var(--line);font-size:.92rem}
+/* lightbox */
+#lb{position:fixed;inset:0;background:rgba(10,8,30,.9);display:none;place-items:center;z-index:100;padding:20px;cursor:zoom-out}
+#lb.open{display:grid}
+#lb img{max-width:100%;max-height:92vh;border-radius:12px}
+#top{position:fixed;right:18px;bottom:18px;z-index:40;opacity:0;pointer-events:none;transition:opacity .2s;background:var(--accent);color:#fff;border-color:var(--accent)}
+#top.show{opacity:1;pointer-events:auto}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
 </head>
-
-
 <body>
+<header><div class="wrap"><nav>
+<a class="logo" href="#home">Dikshasri<b>.</b></a>
+<div class="links" id="links">
+<a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#arcade">Play</a><a href="#experience">Experience</a><a href="#certs">Certifications</a><a href="#contact">Contact</a>
+</div>
+<div><button class="icon-btn" id="theme" aria-label="Switch light or dark theme">◐</button> <button class="icon-btn" id="burger" aria-label="Open menu">☰</button></div>
+</nav></div></header>
 
+<main>
+<section class="hero" id="home"><div class="wrap">
+<div class="hero-grid">
+<div>
+<p class="meta">Hello, I’m</p>
+<h1>Dikshasri S<span>I turn data into decisions.</span></h1>
+<p class="role" id="typed">MBA – Operations & Business Analytics</p>
+<p class="lead">MBA student with a B.Sc. in Computer Science, interested in AI, data analytics, product analytics and solving real business problems with technology.</p>
+<div class="btns"><a class="btn p" href="#projects">Explore my projects</a><a class="btn s" href="#arcade">Play my game</a></div>
+<div class="chips"><span class="chip">Python</span><span class="chip">SQL</span><span class="chip">Power BI</span><span class="chip">Excel</span><span class="chip">Generative AI</span></div>
+</div>
+<div class="photo"><img src="profile.png" alt="Dikshasri profile photo"></div>
+</div>
+<div class="stats">
+<div class="stat"><b data-n="9.64">0</b><small>MBA CGPA</small></div>
+<div class="stat"><b data-n="5">0</b><small>Projects</small></div>
+<div class="stat"><b data-n="6">0</b><small>Certifications</small></div>
+<div class="stat"><b data-n="2">0</b><small>Internships</small></div>
+</div>
+</div></section>
 
-    <!-- =========================
-         NAVIGATION
-    ========================= -->
+<section id="about"><div class="wrap">
+<h2>About me</h2>
+<p class="sub">Where AI, analytics and business problem-solving meet.</p>
+<div class="two">
+<div class="card"><p>I’m a Computer Science graduate pursuing an MBA in Operations and Business Analytics. My interests sit at the intersection of artificial intelligence, data analytics, product thinking and business problem-solving.</p><br><p>I’ve built machine learning applications, business intelligence dashboards and statistical research studies, and I use generative AI tools for research, analysis and documentation. My goal is to build AI-enabled, data-driven solutions for real business problems.</p></div>
+<div class="card">
+<h3>Education</h3><br>
+<p><b>MBA, Operations & Business Analytics</b></p><p class="meta">SRM Institute of Science and Technology, Ramapuram · 2025 – 2027</p><span class="tag">CGPA 9.64</span><br><br>
+<p><b>B.Sc. Computer Science</b></p><p class="meta">Ethiraj College for Women</p><span class="tag">73.91%</span>
+</div></div>
+</div></section>
 
-    <nav>
+<section id="skills"><div class="wrap">
+<h2>Skills</h2><p class="sub">Technical depth with a business lens.</p>
+<div class="three">
+<div class="card skill"><h3>🤖 AI & Generative AI</h3><span class="tag">Generative AI</span><span class="tag">LLM tools</span><span class="tag">Prompt engineering</span><span class="tag">AI-assisted analytics</span><span class="tag">AI evaluation</span></div>
+<div class="card skill"><h3>📊 Data Analytics</h3><span class="tag">Excel</span><span class="tag">Power BI</span><span class="tag">Tableau</span><span class="tag">SPSS</span><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Data visualization</span></div>
+<div class="card skill"><h3>🧠 Machine Learning</h3><span class="tag">Scikit-learn</span><span class="tag">Classification</span><span class="tag">Predictive analytics</span><span class="tag">Model evaluation</span><span class="tag">Flask</span><span class="tag">HTML</span><span class="tag">CSS</span></div>
+<div class="card skill"><h3>💼 Business & Product</h3><span class="tag">Business analytics</span><span class="tag">Operations management</span><span class="tag">Product analytics</span><span class="tag">KPI analysis</span><span class="tag">Stakeholder communication</span><span class="tag">Data-driven decisions</span></div>
+</div>
+</div></section>
 
-        <h2>Dikshasri</h2>
-
-
-        <div>
-
-            <a href="#welcome">
-                Home
-            </a>
-
-            <a href="#about">
-                About
-            </a>
-
-            <a href="#education">
-                Education
-            </a>
-
-            <a href="#skills">
-                Skills
-            </a>
-
-            <a href="#projects">
-                Projects
-            </a>
-
-            <a href="#certifications">
-                Certifications
-            </a>
-
-            <a href="#experience">
-                Experience
-            </a>
-
-            <a href="#contact">
-                Contact
-            </a>
-
-        </div>
-
-    </nav>
-
-
-
-    <!-- =========================
-         WELCOME
-    ========================= -->
-
-    <section
-        class="welcome"
-        id="welcome"
-    >
-
-
-        <div class="welcome-content">
-
-
-            <div class="welcome-label">
-
-                WELCOME TO MY PORTFOLIO
-
-                <span></span>
-
-            </div>
-
-
-            <h1>
-
-                Hi, I'm
-
-                <span>
-                    Dikshasri S
-                </span>
-
-            </h1>
-
-
-            <h3>
-
-                MBA – Operations & Business Analytics |
-
-                B.Sc. Computer Science
-
-            </h3>
-
-
-            <p>
-
-                I am an MBA student with a background
-                in Computer Science, interested in AI,
-                data analytics, product analytics, and
-                solving real-world business problems
-                through technology.
-
-            </p>
-
-
-           <a href="#about" class="welcome-button">Let's Get Started</a>
-
-
-        </div>
-
-
-
-        <div class="welcome-image">
-    <img src="profile.png"
-         alt="Dikshasri profile photo">
+<section id="projects"><div class="wrap">
+<h2>Projects</h2><p class="sub">Click a screenshot to enlarge it, or open a project to try it live.</p>
+<div class="filters" id="filters">
+<button class="on" data-f="all">All</button><button data-f="dash">Dashboards</button><button data-f="ml">Machine learning</button><button data-f="game">Games</button><button data-f="research">Research</button>
+</div>
+<div class="three" id="grid">
+<article class="card proj" data-c="dash"><img class="shot" src="Dashboard%20Excel.png" alt="Excel sales dashboard"><div class="body"><h3>Product Sales & Operational Performance Dashboard</h3><p class="meta">Excel dashboard tracking regional and product performance, order volume, units sold, average order value, return rate, delivery performance and monthly sales trends.</p><div><span class="tag">Excel</span><span class="tag">Data analysis</span><span class="tag">Visualization</span></div></div></article>
+<article class="card proj" data-c="dash"><img class="shot" src="Powerbi%20Dashboard.png" alt="Power BI revenue dashboard"><div class="body"><h3>Business Performance & Revenue Analytics Dashboard</h3><p class="meta">Interactive Power BI dashboard analysing revenue, orders, customer performance, regional revenue and monthly trends through KPI-driven visuals.</p><div><span class="tag">Power BI</span><span class="tag">Business analytics</span></div></div></article>
+<article class="card proj" data-c="ml"><img class="shot" src="Diabetes.png" alt="Diabetes prediction output"><div class="body"><h3>Diabetes Prediction System</h3><p class="meta">Flask web app predicting diabetes risk from the Pima Indians dataset. Trained several classifiers and deployed Logistic Regression with an HTML/CSS interface.</p><div><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Scikit-learn</span><span class="tag">Flask</span></div><button class="go" onclick="document.getElementById('demo').scrollIntoView()">Try the demo below ↓</button></div></article>
+<article class="card proj" data-c="research"><div class="noimg">🚚</div><div class="body"><h3>Study on Traffic Congestion in Road Transport</h3><p class="meta">MBA research on how congestion affects transport costs, fuel consumption, delivery schedules, operational efficiency and supply chain performance.</p><div><span class="tag">Google Forms</span><span class="tag">SPSS</span><span class="tag">Excel</span></div></div></article>
+<article class="card proj" data-c="game"><img class="shot" src="Game.png" alt="Python Mini Game Hub"><div class="body"><h3>Mini Game Hub</h3><p class="meta">Game project built to apply programming logic and user interaction. Originally in Python; playable here as a web version.</p><div><span class="tag">Python</span><span class="tag">Game logic</span></div><button class="go" onclick="document.getElementById('arcade').scrollIntoView()">Play it now ↓</button></div></article>
 </div>
 
-    </section>
-
-
-
-    <!-- =========================
-         TOOLS
-    ========================= -->
-
-    <section class="worked-with">
-
-
-        <div class="section-label">
-
-            Tools & Technologies
-
-            <span></span>
-
-        </div>
-
-
-        <div class="tool-row">
-
-
-            <div class="tool-box">
-                Python
-            </div>
-
-
-            <div class="tool-box">
-                SQL
-            </div>
-
-
-            <div class="tool-box">
-                Power BI
-            </div>
-
-
-            <div class="tool-box">
-                Excel
-            </div>
-
-
-            <div class="tool-box">
-                Generative AI
-            </div>
-
-
-        </div>
-
-
-    </section>
-
-
-
-    <!-- =========================
-         ABOUT
-    ========================= -->
-
-    <section id="about">
-
-
-        <h2>
-            About Me
-        </h2>
-
-
-        <div class="about">
-
-
-            <p>
-
-                I am a Computer Science graduate
-                currently pursuing an MBA specializing
-                in Operations and Business Analytics.
-                My interests lie at the intersection of
-                Artificial Intelligence, data analytics,
-                product thinking, and business
-                problem-solving.
-
-            </p>
-
-
-            <p>
-
-                I have worked on machine learning
-                applications, business intelligence
-                dashboards, statistical research,
-                and data-driven projects. I also use
-                generative AI and LLM-based tools for
-                research, analysis, problem-solving,
-                documentation, and productivity.
-
-            </p>
-
-
-            <p>
-
-                My goal is to apply my technical and
-                business knowledge to develop
-                AI-enabled and data-driven solutions
-                for real-world business problems.
-
-            </p>
-
-
-        </div>
-
-
-    </section>
-
-
-
-    <!-- =========================
-         EDUCATION
-    ========================= -->
-
-    <section id="education">
-
-
-        <h2>
-            Education
-        </h2>
-
-
-        <div class="grid">
-
-
-            <div class="card">
-
-
-                <h3>
-                    MBA
-                </h3>
-
-
-                <p>
-                    <strong>
-                        Operations & Business Analytics
-                    </strong>
-                </p>
-
-
-                <p>
-                    SRM Institute of Science and
-                    Technology, Ramapuram
-                </p>
-
-
-                <p>
-                    2025 – 2027
-                </p>
-
-
-                <p>
-                    <strong>
-                        CGPA: 9.64
-                    </strong>
-                </p>
-
-
-            </div>
-
-
-
-            <div class="card">
-
-
-                <h3>
-                    B.Sc. Computer Science
-                </h3>
-
-
-                <p>
-                    <strong>
-                        Computer Science
-                    </strong>
-                </p>
-
-
-                <p>
-                    Ethiraj College for Women
-                </p>
-
-
-                <p>
-                    Percentage: 73.91%
-                </p>
-
-
-            </div>
-
-
-        </div>
-
-
-    </section>
-
-
-
-    <!-- =========================
-         SKILLS
-    ========================= -->
-
-    <section id="skills">
-
-
-        <h2>
-            Skills
-        </h2>
-
-
-        <div class="grid">
-
-
-            <div class="card skills">
-
-
-                <h3>
-                    🤖 AI & Generative AI
-                </h3>
-
-
-                <span>
-                    Generative AI
-                </span>
-
-
-                <span>
-                    LLM-based Tools
-                </span>
-
-
-                <span>
-                    Prompt Engineering
-                </span>
-
-
-                <span>
-                    AI-assisted Analytics
-                </span>
-
-
-                <span>
-                    AI Evaluation Concepts
-                </span>
-
-
-            </div>
-
-
-
-            <div class="card skills">
-
-
-                <h3>
-                    📊 Data Analytics
-                </h3>
-
-
-                <span>
-                    Microsoft Excel
-                </span>
-
-
-                <span>
-                    Power BI
-                </span>
-
-
-                <span>
-                    Tableau
-                </span>
-
-
-                <span>
-                    SPSS
-                </span>
-
-
-                <span>
-                    Python
-                </span>
-
-
-                <span>
-                    SQL
-                </span>
-
-
-                <span>
-                    Pandas
-                </span>
-
-
-                <span>
-                    NumPy
-                </span>
-
-
-                <span>
-                    Data Analysis
-                </span>
-
-
-                <span>
-                    Data Visualization
-                </span>
-
-
-            </div>
-
-
-
-            <div class="card skills">
-
-
-                <h3>
-                    🧠 Machine Learning
-                </h3>
-
-
-                <span>
-                    Scikit-learn
-                </span>
-
-
-                <span>
-                    Classification
-                </span>
-
-
-                <span>
-                    Predictive Analytics
-                </span>
-
-
-                <span>
-                    Model Evaluation
-                </span>
-
-
-                <span>
-                    Flask
-                </span>
-
-
-                <span>
-                    HTML
-                </span>
-
-
-                <span>
-                    CSS
-                </span>
-
-
-            </div>
-
-
-
-            <div class="card skills">
-
-
-                <h3>
-                    💼 Business & Product
-                </h3>
-
-
-                <span>
-                    Business Analytics
-                </span>
-
-
-                <span>
-                    Operations Management
-                </span>
-
-
-                <span>
-                    Product Analytics
-                </span>
-
-
-                <span>
-                    Business Problem Solving
-                </span>
-
-
-                <span>
-                    KPI Analysis
-                </span>
-
-
-                <span>
-                    Stakeholder Communication
-                </span>
-
-
-                <span>
-                    Data-driven Decision Making
-                </span>
-
-
-            </div>
-
-
-        </div>
-
-
-    </section>
-
-
-
-    <!-- =========================
-         PROJECTS
-    ========================= -->
-
-    <section id="projects">
-
-
-        <h2>
-            📂 Projects
-        </h2>
-
-
-        <div class="card project-card">
-
-
-            <h3>
-                📊 Product Sales & Operational
-                Performance Dashboard
-            </h3>
-            <img src="Dashboard Excel.png"
-     alt="Product Sales and Operational Performance Dashboard"
-     style="width:100%; border-radius:12px; margin:15px 0;">
-
-
-            <p>
-
-                Developed an Excel-based sales
-                analytics dashboard to monitor
-                regional and product performance,
-                order volume, units sold, average
-                order value, return rate, delivery
-                performance, and monthly sales trends.
-
-            </p>
-
-
-            <p>
-
-                <strong>Tools:</strong>
-
-                Excel |
-                Data Analysis |
-                Data Visualization
-
-            </p>
-
-
-        </div>
-
-
-
-        <div class="card project-card">
-
-
-            <h3>
-                📈 Business Performance &
-                Revenue Analytics Dashboard
-            </h3>
-            <img src="Powerbi Dashboard.png"
-     alt="Business Performance and Revenue Analytics Dashboard"
-     style="width:100%; border-radius:12px; margin:15px 0;">
-
-
-            <p>
-
-                Developed an interactive Power BI
-                dashboard to analyze revenue, orders,
-                customer performance, regional revenue,
-                and monthly revenue trends through
-                KPI-driven visualizations.
-
-            </p>
-
-
-            <p>
-
-                <strong>Tools:</strong>
-
-                Power BI |
-                Business Analytics |
-                Data Visualization
-
-            </p>
-
-
-        </div>
-
-
-
-        <div class="card project-card">
-
-    <h3>
-        🧠 Diabetes Prediction System
-    </h3>
-
-    <img src="Diabetes.png"
-         alt="Diabetes Prediction System output"
-         style="width:100%; border-radius:12px; margin:15px 0;">
-
-    <p>
-
-        Developed a machine-learning-based
-        web application for diabetes risk
-        prediction using the Pima Indians
-        Diabetes Dataset.
-
-        Prepared the dataset, trained
-        classification models, and implemented
-        Logistic Regression as the final model.
-
-        Deployed the trained model using Flask
-        with an HTML/CSS interface.
-
-    </p>
-
-
-    <p>
-
-        <strong>Tools:</strong>
-
-        Python |
-        Pandas |
-        Scikit-learn |
-        Flask |
-        HTML |
-        CSS
-
-    </p>
-
+<div class="card demo" id="demo" style="margin-top:34px">
+<h3>Try it: diabetes risk estimator</h3>
+<p class="meta">A simplified, illustrative demo of how a logistic regression model turns inputs into a probability. It is not the trained model and not medical advice.</p>
+<div class="two"><div>
+<label>Glucose: <b id="vg">120</b> mg/dL</label><input type="range" id="g" min="60" max="200" value="120">
+<label>BMI: <b id="vb">28</b></label><input type="range" id="b" min="16" max="48" value="28">
+<label>Age: <b id="va">35</b></label><input type="range" id="a" min="18" max="80" value="35">
+</div><div><p class="meta">Estimated risk</p><div class="meter"><i id="bar"></i></div><h3 id="risk">–</h3></div></div>
 </div>
+</div></section>
 
+<section id="arcade"><div class="wrap">
+<h2>Play my game</h2><p class="sub">The projects section isn’t only screenshots. Here’s the Mini Game Hub, playable right in your browser.</p>
+<div class="arcade">
+<h3>🎮 Mini Game Hub</h3><p>Pick a game and beat the computer.</p>
+<div class="tabs" id="tabs"><button class="on" data-g="ttt">Tic-Tac-Toe</button><button data-g="cards">Memory Cards</button><button data-g="guess">Number Guess</button></div>
 
+<div class="game on" id="ttt"><p class="score">You are ✕ and go first.</p><div class="board" id="board"></div><div class="msg" id="tmsg"></div><button class="small" id="treset">New game</button></div>
 
-        <div class="card project-card">
+<div class="game" id="cards"><div class="tabs" id="lvtabs" style="justify-content:center"><button class="on">Level 1 · English</button><button>Level 2 · Tamil</button><button>Level 3 · Chinese</button></div><p class="score">Flip two cards at a time and match every pair. Moves: <b id="mv">0</b></p><div class="mgrid" id="mgrid"></div><div class="msg" id="mmsg"></div><button class="small" id="mnext" hidden>Next level</button> <button class="small" id="mreset">Restart level</button></div>
 
-
-            <h3>
-                🚚 Study on Traffic Congestion
-                in Road Transport
-            </h3>
-
-
-            <p>
-
-                Conducted an MBA research study
-                examining the impact of traffic
-                congestion on transportation costs,
-                fuel consumption, delivery schedules,
-                operational efficiency, and supply
-                chain performance.
-
-            </p>
-
-
-            <p>
-
-                <strong>Tools:</strong>
-
-                Google Forms |
-                SPSS |
-                Excel |
-                Data Analysis
-
-            </p>
-
-
-        </div>
-
-
-
-        <div class="card project-card">
-
-
-            <h3>
-                🎮 Python Game Application
-            </h3>
-            <img src="Game.png"
-     alt="Python Mini Game Hub"
-     style="width:100%; border-radius:12px; margin:15px 0;">
-
-
-            <p>
-
-                Developed a Python-based
-                game/application as an undergraduate
-                project, applying programming logic
-                and user interaction concepts.
-
-            </p>
-
-
-            <p>
-
-                <strong>Tools:</strong>
-
-                Python
-
-            </p>
-
-
-        </div>
-
-
-    </section>
-
-
-
-    <!-- =========================
-         CERTIFICATIONS
-    ========================= -->
-
-    <section id="certifications">
-
-
-        <h2>
-            📜 Certifications & Job Simulations
-        </h2>
-
-
-        <div class="grid">
-
-
-            <div class="card">
-
-                <h3>
-                    HPE — GenAI Powered Data
-                    Analytics Job Simulation
-                </h3>
-                <img src="Gen AI Data analytics.png"
-     alt="GenAI Data Analytics Certificate"
-     style="width:100%; border-radius:12px; margin:15px 0;">
-                <p>
-    Completed a GenAI-powered data analytics job simulation
-    covering exploratory data analysis, risk profiling,
-    data storytelling, and AI-driven business strategy.
-</p>
-
-                <p>
-                    Forage | June 2026
-                </p>
-
-            </div>
-            
-            <div class="card">
-    <h3>📊 Power BI for Business Intelligence</h3>
-                <img src="PowerBi.png"
-     alt="Power BI Certificate"
-     style="width:100%; border-radius:12px; margin:15px 0;">
-    <p>
-    Learned to build interactive Power BI dashboards, create KPIs,
-    and develop DAX measures using appropriate aggregation functions
-    to support data analysis and business decision-making.
-</p>
-    <p>
-        <strong>Platform:</strong> Udemy
-    </p>
+<div class="game" id="guess"><p class="score">I’m thinking of a number from 1 to 100.</p><br><input type="number" id="gi" min="1" max="100" aria-label="Your guess"><button class="small" id="gb">Guess</button><div class="msg" id="gmsg" style="margin-top:14px"></div><button class="small" id="gr" style="margin-top:8px">New number</button></div>
 </div>
+</div></section>
 
-            <div class="card">
-
-                <h3>
-                    HPE — Digital Sales
-                    Job Simulation
-                </h3>
-                <img src="Digital Sales.png"
-     alt="Digital Sales Certificate"
-     style="width:100%; border-radius:12px; margin:15px 0;">
-                <p>
-    Completed a digital sales job simulation covering
-    sales strategy, customer engagement, digital selling,
-    and data-driven sales decision-making.
-</p>
-
-                <p>
-                    Forage | May 2026
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <h3>
-                    Deloitte — Data Analytics
-                    Job Simulation
-                </h3>
-                <img src="Deloitte Data Analytics.png"
-     alt="Deloitte Data Analytics Certificate"
-     style="width:100%; border-radius:12px; margin:15px 0;">
-                <p>
-    Completed a data analytics job simulation covering
-    data analysis, forensic technology, data interpretation,
-    and business-focused analytical problem solving.
-</p>
-
-                <p>
-                    Forage | March 2026
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-    <h3>📊 Business Analytics with Excel</h3>
-
-    <p>
-        Completed training in Excel-based business analytics,
-        including data analysis, visualization, and reporting.
-    </p>
-
+<section id="experience"><div class="wrap">
+<h2>Experience</h2><p class="sub">Hands-on exposure to operations, research and web development.</p>
+<div class="tl">
+<div class="card"><h3>SRR Industries · Internship</h3><p class="meta">Logistics, supply chain and product analysis</p><br><p>Gained practical exposure to logistics and supply chain operations and documentation. Analysed product performance, transportation needs and the movement of raw materials and finished goods. Collected primary data with Google Forms and analysed it in SPSS for an academic research study.</p><br><span class="tag">Product analysis</span><span class="tag">SPSS</span><span class="tag">Research</span><span class="tag">Documentation</span></div>
+<div class="card"><h3>Chennai Port Authority · Web Development Intern</h3><br><p>Assisted in building web pages with HTML and CSS, gaining exposure to front-end structure and basic website implementation.</p><br><span class="tag">HTML</span><span class="tag">CSS</span></div>
 </div>
-
-
-            <div class="card">
-
-                <h3>
-                    NPTEL — Fundamentals of
-                    Digital Marketing
-                </h3>
-                <img src="NPTEL Certificate.png"
-     alt="NPTEL Fundamentals of Digital Marketing Certificate"
-     style="width:100%; border-radius:12px; margin:15px 0;">
-                <p>
-    Completed a digital marketing course covering
-    marketing fundamentals, digital channels, customer
-    engagement, and data-driven marketing concepts.
-</p>
-                
-
-                <p>
-                    Course Completion |
-                    Score: 78%
-                </p>
-
-            </div>
-
-
-        </div>
-
-
-    </section>
-
-
-
-    <!-- =========================
-         EXPERIENCE
-    ========================= -->
-
-    <section id="experience">
-
-    <h2>
-        💼 Internship & Experience
-    </h2>
-
-    <div class="grid">
-
-        <div class="card">
-
-            <h3>
-                SRR Industries — Internship
-            </h3>
-
-            <p>
-    Gained practical exposure to logistics and supply chain
-    operations, documentation, and product-related activities
-    at SRR Industries.
-
-    Developed an understanding of the company's products,
-    including their characteristics, applications, movement,
-    and role in the overall supply chain.
-
-    Analysed product-related information to understand
-    product performance, transportation requirements,
-    operational challenges, and movement of raw materials
-    and finished goods.
-
-    Collected primary data through Google Forms and analysed
-    responses using SPSS as part of the academic research study.
-</p>
-
-<p>
-    <strong>Focus:</strong>
-    Product Analysis |
-    Logistics & Supply Chain |
-    Data Analysis |
-    Documentation |
-    SPSS |
-    Research
-</p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>
-                Chennai Port Authority —
-                Web Development Intern
-            </h3>
-
-            <p>
-                Assisted in developing web pages using HTML
-                and CSS, gaining practical exposure to
-                front-end development, webpage structure,
-                and basic website implementation.
-            </p>
-
-            <p>
-                <strong>Focus:</strong>
-                HTML |
-                CSS |
-                Web Development
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-    <section id="ai-product">
-
-    <h2>
-        🤖 AI & Product
-    </h2>
-
-    <div class="grid">
-
-        <div class="card">
-            <h3>Generative AI & LLM Tools</h3>
-            <p>
-                Hands-on experience using Generative AI tools
-                for research, analysis, assignments, content
-                development, problem solving, and productivity.
-            </p>
-
-            <p>
-                <strong>Tools:</strong>
-                ChatGPT |
-                Gemini |
-                Claude |
-                Perplexity |
-                NotebookLM
-            </p>
-        </div>
-
-
-        <div class="card">
-            <h3>AI-Assisted Analytics</h3>
-            <p>
-                Use AI tools to support data analysis,
-                interpretation, research, documentation,
-                and development of data-driven solutions.
-            </p>
-
-            <p>
-                <strong>Focus:</strong>
-                Data Analysis |
-                AI-Assisted Problem Solving |
-                Business Insights
-            </p>
-        </div>
-
-
-        <div class="card">
-            <h3>AI Evaluation & Testing</h3>
-            <p>
-                Familiar with evaluating AI-generated outputs
-                through structured prompts, test cases,
-                consistency checks, accuracy review, and
-                identifying potential hallucinations.
-            </p>
-
-            <p>
-                <strong>Concepts:</strong>
-                Prompt Engineering |
-                Test Cases |
-                Output Evaluation |
-                Hallucination Awareness
-            </p>
-        </div>
-
-
-        <div class="card">
-            <h3>Product & Business Analysis</h3>
-            <p>
-                Experience analysing products and business
-                information at SRR Industries, supported by
-                data analysis, research, documentation, and
-                understanding of operational requirements.
-            </p>
-
-            <p>
-                <strong>Focus:</strong>
-                Product Analysis |
-                Business Analysis |
-                Operations |
-                Stakeholder Understanding
-            </p>
-        </div>
-
-    </div>
-
-</section>
-
-
-    <!-- =========================
-         CONTACT
-    ========================= -->
-
-    <section
-    id="contact"
-    class="contact"
->
-
-    <h2>
-        Let's Connect
-    </h2>
-
-    <div class="card">
-
-        <p>
-           I am open to opportunities in AI Product Management, Product Operations, Data Analytics, Business Analytics, Human Resources, Operations, and AI-driven solutions. I am interested in applying my technical and business knowledge to solve data-driven business problems, improve operational processes, and contribute to people and business-focused initiatives.
-        </p>
-
-        <br>
-
-        <p>
-    📧 Email:
-
-    <a
-        href="mailto:saravanandikshasri21064@gmail.com"
-    >
-
-        GMail
-
-    </a>
-</p>
-
-        <p>
-            💼 LinkedIn:
-            <a
-                href="https://www.linkedin.com/in/dikshasri-saravanan-a45832319"
-                target="_blank"
-            >
-                LinkedIn Profile
-            </a>
-        </p>
-
-        <p>
-            🐙 GitHub:
-            <a
-                href="https://github.com/dikshasri21"
-                target="_blank"
-            >
-                GitHub Profile
-            </a>
-        </p>
-
-    </div>
-
-</section>
-
-
-    <!-- =========================
-         FOOTER
-    ========================= -->
-
-    <footer>
-
-        <p>
-
-            © 2026 Dikshasri S |
-            Professional Portfolio
-
-        </p>
-
-    </footer>
-    <script>
-let lastScrollTop = 0;
-const nav = document.querySelector("nav");
-
-window.addEventListener("scroll", function () {
-    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (currentScroll > lastScrollTop && currentScroll > 100) {
-        // Scrolling down → hide navigation
-        nav.classList.add("nav-hidden");
-    } else {
-        // Scrolling up → show navigation
-        nav.classList.remove("nav-hidden");
-    }
-
-    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-});
+<h2 style="margin-top:60px">AI & product</h2><br>
+<div class="three">
+<div class="card"><h3>Generative AI & LLM tools</h3><br><p class="meta">Research, analysis, assignments and productivity with ChatGPT, Gemini, Claude, Perplexity and NotebookLM.</p></div>
+<div class="card"><h3>AI-assisted analytics</h3><br><p class="meta">Using AI to support analysis, interpretation, documentation and data-driven solutions.</p></div>
+<div class="card"><h3>AI evaluation & testing</h3><br><p class="meta">Structured prompts, test cases, consistency checks, accuracy review and spotting hallucinations.</p></div>
+<div class="card"><h3>Product & business analysis</h3><br><p class="meta">Analysing products and operations at SRR Industries, backed by research and documentation.</p></div>
+</div>
+</div></section>
+
+<section id="certs"><div class="wrap">
+<h2>Certifications</h2><p class="sub">Click any certificate to view it full size.</p>
+<div class="three">
+<div class="card cert"><img src="Gen%20AI%20Data%20analytics.png" alt="HPE GenAI certificate"><div><h3>HPE · GenAI Powered Data Analytics</h3><p class="meta">Forage · June 2026. EDA, risk profiling, data storytelling and AI-driven strategy.</p></div></div>
+<div class="card cert"><img src="PowerBi.png" alt="Power BI certificate"><div><h3>Power BI for Business Intelligence</h3><p class="meta">Udemy. Dashboards, KPIs and DAX measures.</p></div></div>
+<div class="card cert"><img src="Digital%20Sales.png" alt="HPE Digital Sales certificate"><div><h3>HPE · Digital Sales</h3><p class="meta">Forage · May 2026. Sales strategy, customer engagement and digital selling.</p></div></div>
+<div class="card cert"><img src="Deloitte%20Data%20Analytics.png" alt="Deloitte certificate"><div><h3>Deloitte · Data Analytics</h3><p class="meta">Forage · March 2026. Data analysis, forensic technology and interpretation.</p></div></div>
+<div class="card cert"><img src="NPTEL%20Certificate.png" alt="NPTEL certificate"><div><h3>NPTEL · Fundamentals of Digital Marketing</h3><p class="meta">Course completion · Score 78%.</p></div></div>
+<div class="card"><h3>Business Analytics with Excel</h3><br><p class="meta">Training in Excel-based analysis, visualization and reporting.</p></div>
+</div>
+</div></section>
+
+<section id="contact"><div class="wrap contact">
+<div class="card" style="padding:50px 26px">
+<h2>Let’s connect</h2>
+<p class="sub" style="margin:0 auto 26px">Open to roles in AI Product Management, Product Operations, Data Analytics, Business Analytics, HR and Operations.</p>
+<div class="btns"><a class="btn p" href="mailto:saravanandikshasri21064@gmail.com">Email me</a><a class="btn s" href="https://www.linkedin.com/in/dikshasri-saravanan-a45832319" target="_blank" rel="noopener">LinkedIn</a><a class="btn s" href="https://github.com/dikshasri21" target="_blank" rel="noopener">GitHub</a></div>
+</div></div></section>
+</main>
+<footer>© 2026 Dikshasri S · Professional Portfolio</footer>
+<button class="icon-btn" id="top" aria-label="Back to top">↑</button>
+<div id="lb"><img alt=""></div>
+
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+// theme + menu
+try{const t=localStorage.getItem('t');if(t)document.documentElement.dataset.theme=t}catch(e){}
+$('#theme').onclick=()=>{const d=document.documentElement,cur=d.dataset.theme||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'),n=cur==='dark'?'light':'dark';d.dataset.theme=n;try{localStorage.setItem('t',n)}catch(e){}};
+$('#burger').onclick=()=>$('#links').classList.toggle('open');
+$$('#links a').forEach(a=>a.onclick=()=>$('#links').classList.remove('open'));
+// active link + back to top
+const secs=$$('main section');
+addEventListener('scroll',()=>{let c='';secs.forEach(s=>{if(scrollY>=s.offsetTop-120)c=s.id});$$('#links a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+c));$('#top').classList.toggle('show',scrollY>500)},{passive:true});
+$('#top').onclick=()=>scrollTo({top:0});
+// counters
+$$('[data-n]').forEach(el=>{const end=+el.dataset.n,dec=String(end).includes('.')?2:0;let s=null;const f=t=>{s=s||t;const p=Math.min((t-s)/1200,1);el.textContent=(end*p).toFixed(dec);if(p<1)requestAnimationFrame(f)};requestAnimationFrame(f)});
+// filters
+$$('#filters button').forEach(b=>b.onclick=()=>{$$('#filters button').forEach(x=>x.classList.toggle('on',x===b));$$('#grid .proj').forEach(c=>c.classList.toggle('hide',b.dataset.f!=='all'&&c.dataset.c!==b.dataset.f))});
+// lightbox
+$$('img.shot,.cert img').forEach(i=>i.onclick=()=>{$('#lb img').src=i.src;$('#lb').classList.add('open')});
+$('#lb').onclick=()=>$('#lb').classList.remove('open');
+addEventListener('keydown',e=>{if(e.key==='Escape')$('#lb').classList.remove('open')});
+// risk demo
+function risk(){const g=+$('#g').value,b=+$('#b').value,a=+$('#a').value;$('#vg').textContent=g;$('#vb').textContent=b;$('#va').textContent=a;
+const z=-8+0.035*g+0.08*b+0.025*a,p=Math.round(100/(1+Math.exp(-z)));$('#bar').style.width=p+'%';$('#risk').textContent=p+'% ('+(p<30?'low':p<60?'moderate':'high')+')'}
+['g','b','a'].forEach(i=>$('#'+i).oninput=risk);risk();
+// game tabs
+$$('#tabs button').forEach(b=>b.onclick=()=>{$$('#tabs button').forEach(x=>x.classList.toggle('on',x===b));$$('.game').forEach(g=>g.classList.toggle('on',g.id===b.dataset.g))});
+// tic tac toe
+const L=[[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];let B,over;
+const win=(b,p)=>L.some(l=>l.every(i=>b[i]===p));
+function draw(){$('#board').innerHTML='';B.forEach((v,i)=>{const c=document.createElement('button');c.className='cell '+v.toLowerCase();c.textContent=v==='X'?'✕':v==='O'?'◯':'';c.disabled=!!v||over;c.setAttribute('aria-label','Cell '+(i+1));c.onclick=()=>play(i);$('#board').append(c)})}
+function reset(){B=Array(9).fill('');over=false;$('#tmsg').textContent='Your turn';draw()}
+function end(){if(win(B,'X')){$('#tmsg').textContent='You win! 🎉';over=true}else if(win(B,'O')){$('#tmsg').textContent='Computer wins. Try again!';over=true}else if(B.every(Boolean)){$('#tmsg').textContent='Draw!';over=true}return over}
+function play(i){B[i]='X';if(!end()){const e=B.map((v,k)=>v?null:k).filter(k=>k!==null);const t=p=>e.find(k=>{const c=[...B];c[k]=p;return win(c,p)});
+let m=t('O');if(m===undefined)m=t('X');if(m===undefined)m=B[4]?'':4;if(m===''||m===undefined)m=e[Math.floor(Math.random()*e.length)];B[m]='O';end()}draw()}
+$('#treset').onclick=reset;reset();
+// memory cards
+const LV=[['A','B','C','D','E','F'],['அ','ஆ','இ','ஈ','உ','ஊ','எ','ஏ'],['山','水','火','木','金','人','日','月','大','学']];
+let lvl=0,unlocked=0,first,lock,mv,mt;
+const NM=['Level 1 · English','Level 2 · Tamil','Level 3 · Chinese'];
+function tabs(){$$('#lvtabs button').forEach((b,i)=>{b.classList.toggle('on',i===lvl);b.disabled=i>unlocked;b.textContent=(i>unlocked?'🔒 ':'')+NM[i]})}
+function mem(){const S=LV[lvl],d=[...S,...S].sort(()=>Math.random()-.5);first=null;lock=false;mv=0;mt=0;$('#mv').textContent=0;$('#mnext').hidden=true;$('#mmsg').textContent='Find all '+S.length+' pairs.';
+tabs();const g=$('#mgrid');g.innerHTML='';
+d.forEach(e=>{const c=document.createElement('button');c.className='mc';c.textContent='?';c.setAttribute('aria-label','Face-down card');
+c.onclick=()=>{if(lock||c.classList.contains('up'))return;c.classList.add('up');c.textContent=e;if(!first){first=c;return}
+mv++;$('#mv').textContent=mv;
+if(first.textContent===e){mt++;first.classList.add('done');c.classList.add('done');first=null;
+if(mt===S.length){if(lvl<2){unlocked=Math.max(unlocked,lvl+1);tabs();$('#mmsg').textContent='Level '+(lvl+1)+' complete in '+mv+' moves! Level '+(lvl+2)+' unlocked 🎉';$('#mnext').hidden=false}else $('#mmsg').textContent='All 3 levels complete! 🏆 Final level: '+mv+' moves.'}}
+else{lock=true;const f=first;first=null;setTimeout(()=>{f.classList.remove('up');c.classList.remove('up');f.textContent=c.textContent='?';lock=false},800)}};g.append(c)})}
+$$('#lvtabs button').forEach((b,i)=>b.onclick=()=>{lvl=i;mem()});
+$('#mnext').onclick=()=>{lvl++;mem()};
+$('#mreset').onclick=mem;mem();
+// number guess
+let sec,tries;function ng(){sec=1+Math.floor(Math.random()*100);tries=0;$('#gmsg').textContent='Make your first guess.';$('#gi').value=''}
+$('#gb').onclick=()=>{const v=+$('#gi').value;if(!v||v<1||v>100){$('#gmsg').textContent='Enter a number from 1 to 100.';return}tries++;
+$('#gmsg').textContent=v===sec?'Correct! You got it in '+tries+' tries 🎉':v<sec?'Too low. Try higher.':'Too high. Try lower.'};
+$('#gi').onkeydown=e=>{if(e.key==='Enter')$('#gb').click()};$('#gr').onclick=ng;ng();
 </script>
-
-
 </body>
-
 </html>
