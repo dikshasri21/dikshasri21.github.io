@@ -102,6 +102,7 @@ nav{display:flex;align-items:center;justify-content:space-between;height:64px}
 .mc:hover{transform:translateY(-3px)}
 .mc.up{background:#fff;color:#1E1B3F;transform:none}
 .mc.done{background:#5EEAD4;color:#1E1B3F;cursor:default}
+.cword{font-family:'Bricolage Grotesque';font-size:clamp(2.2rem,8vw,3.6rem);font-weight:800;background:#F3F1FF;color:#1E1B3F;border-radius:18px;padding:22px 10px;margin:14px auto;max-width:420px}
 /* demo */
 .demo label{display:block;margin:14px 0 4px;font-weight:500}
 .demo input[type=range]{width:100%;accent-color:var(--accent)}
@@ -191,7 +192,7 @@ footer{padding:30px 0;text-align:center;color:var(--mute);border-top:1px solid v
 <article class="card proj" data-c="dash"><img class="shot" src="Powerbi%20Dashboard.png" alt="Power BI revenue dashboard"><div class="body"><h3>Business Performance & Revenue Analytics Dashboard</h3><p class="meta">Interactive Power BI dashboard analysing revenue, orders, customer performance, regional revenue and monthly trends through KPI-driven visuals.</p><div><span class="tag">Power BI</span><span class="tag">Business analytics</span></div></div></article>
 <article class="card proj" data-c="ml"><img class="shot" src="Diabetes.png" alt="Diabetes prediction output"><div class="body"><h3>Diabetes Prediction System</h3><p class="meta">Flask web app predicting diabetes risk from the Pima Indians dataset. Trained several classifiers and deployed Logistic Regression with an HTML/CSS interface.</p><div><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Scikit-learn</span><span class="tag">Flask</span></div><button class="go" onclick="document.getElementById('demo').scrollIntoView()">Try the demo below ↓</button></div></article>
 <article class="card proj" data-c="research"><div class="noimg">🚚</div><div class="body"><h3>Study on Traffic Congestion in Road Transport</h3><p class="meta">MBA research on how congestion affects transport costs, fuel consumption, delivery schedules, operational efficiency and supply chain performance.</p><div><span class="tag">Google Forms</span><span class="tag">SPSS</span><span class="tag">Excel</span></div></div></article>
-<article class="card proj" data-c="game"><img class="shot" src="Game.png" alt="Python Mini Game Hub"><div class="body"><h3>Mini Game Hub</h3><p class="meta">Game project built to apply programming logic and user interaction. Originally in Python; playable here as a web version.</p><div><span class="tag">Python</span><span class="tag">Game logic</span></div><button class="go" onclick="document.getElementById('arcade').scrollIntoView()">Play it now ↓</button></div></article>
+<article class="card proj" data-c="game"><img class="shot" src="Game.png" alt="Python Mini Game Hub"><div class="body"><h3>Mini Game Hub</h3><p class="meta">Python game hub with a Memory Game and a Color Guess Game, built to apply programming logic and user interaction. Playable here as a web version.</p><div><span class="tag">Python</span><span class="tag">Game logic</span></div><button class="go" onclick="document.getElementById('arcade').scrollIntoView()">Play it now ↓</button></div></article>
 </div>
 
 <div class="card demo" id="demo" style="margin-top:34px">
@@ -208,14 +209,13 @@ footer{padding:30px 0;text-align:center;color:var(--mute);border-top:1px solid v
 <section id="arcade"><div class="wrap">
 <h2>Play my game</h2><p class="sub">The projects section isn’t only screenshots. Here’s the Mini Game Hub, playable right in your browser.</p>
 <div class="arcade">
-<h3>🎮 Mini Game Hub</h3><p>Pick a game and beat the computer.</p>
-<div class="tabs" id="tabs"><button class="on" data-g="ttt">Tic-Tac-Toe</button><button data-g="cards">Memory Cards</button><button data-g="guess">Number Guess</button></div>
+<h3>🎮 Mini Game Hub</h3><p>The two games from my Python project, rebuilt for the web.</p>
+<div class="tabs" id="tabs"><button class="on" data-g="cards">Memory Game</button><button data-g="color">Color Guess Game</button></div>
 
-<div class="game on" id="ttt"><p class="score">You are ✕ and go first.</p><div class="board" id="board"></div><div class="msg" id="tmsg"></div><button class="small" id="treset">New game</button></div>
 
-<div class="game" id="cards"><div class="tabs" id="lvtabs" style="justify-content:center"><button class="on">Level 1 · English</button><button>Level 2 · Tamil</button><button>Level 3 · Chinese</button></div><p class="score">Flip two cards at a time and match every pair. Moves: <b id="mv">0</b></p><div class="mgrid" id="mgrid"></div><div class="msg" id="mmsg"></div><button class="small" id="mnext" hidden>Next level</button> <button class="small" id="mreset">Restart level</button></div>
+<div class="game on" id="cards"><div class="tabs" id="lvtabs" style="justify-content:center"><button class="on">Level 1 · English</button><button>Level 2 · Tamil</button><button>Level 3 · Chinese</button></div><p class="score">Flip two cards at a time and match every pair. Moves: <b id="mv">0</b></p><div class="mgrid" id="mgrid"></div><div class="msg" id="mmsg"></div><button class="small" id="mnext" hidden>Next level</button> <button class="small" id="mreset">Restart level</button></div>
 
-<div class="game" id="guess"><p class="score">I’m thinking of a number from 1 to 100.</p><br><input type="number" id="gi" min="1" max="100" aria-label="Your guess"><button class="small" id="gb">Guess</button><div class="msg" id="gmsg" style="margin-top:14px"></div><button class="small" id="gr" style="margin-top:8px">New number</button></div>
+<div class="game" id="color"><div class="tabs" id="ctabs" style="justify-content:center"><button class="on">Level 1 · 45 sec</button><button>Level 2 · 1 min</button></div><p class="score">Type the <b>colour of the text</b>, not the word itself. Time: <b id="ct">45</b>s · Score: <b id="cs">0</b><span id="ctg">/20</span></p><div class="cword" id="cw">Ready?</div><div><input type="text" id="ci" placeholder="Type the colour" autocomplete="off" aria-label="Colour name" style="width:170px" disabled><button class="small" id="cgo">Start</button></div><div class="msg" id="cm" style="margin-top:12px"></div></div>
 </div>
 </div></section>
 
@@ -282,15 +282,6 @@ const z=-8+0.035*g+0.08*b+0.025*a,p=Math.round(100/(1+Math.exp(-z)));$('#bar').s
 ['g','b','a'].forEach(i=>$('#'+i).oninput=risk);risk();
 // game tabs
 $$('#tabs button').forEach(b=>b.onclick=()=>{$$('#tabs button').forEach(x=>x.classList.toggle('on',x===b));$$('.game').forEach(g=>g.classList.toggle('on',g.id===b.dataset.g))});
-// tic tac toe
-const L=[[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];let B,over;
-const win=(b,p)=>L.some(l=>l.every(i=>b[i]===p));
-function draw(){$('#board').innerHTML='';B.forEach((v,i)=>{const c=document.createElement('button');c.className='cell '+v.toLowerCase();c.textContent=v==='X'?'✕':v==='O'?'◯':'';c.disabled=!!v||over;c.setAttribute('aria-label','Cell '+(i+1));c.onclick=()=>play(i);$('#board').append(c)})}
-function reset(){B=Array(9).fill('');over=false;$('#tmsg').textContent='Your turn';draw()}
-function end(){if(win(B,'X')){$('#tmsg').textContent='You win! 🎉';over=true}else if(win(B,'O')){$('#tmsg').textContent='Computer wins. Try again!';over=true}else if(B.every(Boolean)){$('#tmsg').textContent='Draw!';over=true}return over}
-function play(i){B[i]='X';if(!end()){const e=B.map((v,k)=>v?null:k).filter(k=>k!==null);const t=p=>e.find(k=>{const c=[...B];c[k]=p;return win(c,p)});
-let m=t('O');if(m===undefined)m=t('X');if(m===undefined)m=B[4]?'':4;if(m===''||m===undefined)m=e[Math.floor(Math.random()*e.length)];B[m]='O';end()}draw()}
-$('#treset').onclick=reset;reset();
 // memory cards
 const LV=[['A','B','C','D','E','F'],['அ','ஆ','இ','ஈ','உ','ஊ','எ','ஏ'],['山','水','火','木','金','人','日','月','大','学']];
 let lvl=0,unlocked=0,first,lock,mv,mt;
@@ -307,11 +298,21 @@ else{lock=true;const f=first;first=null;setTimeout(()=>{f.classList.remove('up')
 $$('#lvtabs button').forEach((b,i)=>b.onclick=()=>{lvl=i;mem()});
 $('#mnext').onclick=()=>{lvl++;mem()};
 $('#mreset').onclick=mem;mem();
-// number guess
-let sec,tries;function ng(){sec=1+Math.floor(Math.random()*100);tries=0;$('#gmsg').textContent='Make your first guess.';$('#gi').value=''}
-$('#gb').onclick=()=>{const v=+$('#gi').value;if(!v||v<1||v>100){$('#gmsg').textContent='Enter a number from 1 to 100.';return}tries++;
-$('#gmsg').textContent=v===sec?'Correct! You got it in '+tries+' tries 🎉':v<sec?'Too low. Try higher.':'Too high. Try lower.'};
-$('#gi').onkeydown=e=>{if(e.key==='Enter')$('#gb').click()};$('#gr').onclick=ng;ng();
+// color game
+const CN=[['red','#E53935'],['blue','#1E66F5'],['green','#2EA043'],['yellow','#E6B800'],['orange','#F57C00'],['purple','#8E44AD'],['pink','#EC4899'],['brown','#8B5A2B']];
+const NEU=['Python','Data','Excel','Power BI','Analytics','Portfolio'],CL=[{t:45,p:20,m:0},{t:60,p:30,m:1}],CNM=['Level 1 · 45 sec','Level 2 · 1 min'];
+let cl=0,cu=0,cs=0,ans='',tm=null,left=0;
+function ctabs(){$$('#ctabs button').forEach((b,i)=>{b.classList.toggle('on',i===cl);b.disabled=i>cu||!!tm;b.textContent=(i>cu?'🔒 ':'')+CNM[i]})}
+function nextWord(){const c=CN[Math.floor(Math.random()*8)];let w;if(CL[cl].m){const o=CN.filter(x=>x!==c);w=o[Math.floor(Math.random()*o.length)][0].toUpperCase()}else w=NEU[Math.floor(Math.random()*NEU.length)];ans=c[0];$('#cw').textContent=w;$('#cw').style.color=c[1]}
+function cidle(){clearInterval(tm);tm=null;cs=0;left=CL[cl].t;$('#ct').textContent=left;$('#cs').textContent=0;$('#ctg').textContent='/'+CL[cl].p;$('#cw').textContent='Ready?';$('#cw').style.color='#1E1B3F';$('#ci').disabled=true;$('#ci').value='';$('#cgo').textContent='Start';$('#cm').textContent='Level '+(cl+1)+': reach a score of '+CL[cl].p+' before time runs out.';ctabs()}
+function cend(ok){const sc=cs,lf=left;cidle();$('#cs').textContent=sc;let m=ok?'Target reached with '+lf+'s left! ':'Time’s up! You scored '+sc+'. ';
+if(ok){if(cl<1){cu=Math.max(cu,cl+1);m+='Level '+(cl+2)+' unlocked 🎉'}else m+='Both levels complete! 🏆'}else m+='You need '+CL[cl].p+' to pass. Try again!';
+$('#cm').textContent=m;ctabs()}
+$('#cgo').onclick=()=>{if(tm){cidle();return}cs=0;left=CL[cl].t;$('#cs').textContent=0;$('#ct').textContent=left;$('#cm').textContent='';const i=$('#ci');i.disabled=false;i.value='';i.focus();$('#cgo').textContent='Stop';nextWord();
+tm=setInterval(()=>{left--;$('#ct').textContent=left;if(left<=0)cend()},1000);ctabs()};
+$('#ci').onkeydown=e=>{if(e.key!=='Enter'||!tm)return;const v=e.target.value.trim().toLowerCase();if(!v)return;
+if(v===ans){cs++;$('#cs').textContent=cs;if(cs>=CL[cl].p){cend(true);return}$('#cm').textContent='✓ Correct'}else $('#cm').textContent='✗ It was '+ans;e.target.value='';nextWord()};
+$$('#ctabs button').forEach((b,i)=>b.onclick=()=>{cl=i;cidle()});cidle();
 </script>
 </body>
 </html>
